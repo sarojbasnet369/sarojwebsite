@@ -1,0 +1,336 @@
+/* General Styles */
+body {
+    background-color: #4682B4; /* Light blue background */
+    color: #000000; /* Black text color */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #3bf790, #3b6df7); /* Gradient background */
+    color: white; /* Text color */
+    padding: 100px 0; /* Increase padding for more space */
+    text-align: center; /* Center text */
+    position: relative; /* Relative position for text */
+}
+
+header h1 {
+    font-size: 60px; /* Header size */
+    margin: 0; /* No margin */
+    font-weight: 1000; /* Bold weight */
+    position: relative;
+    top: 0px; /* Move down 0px from the top of the header */
+    left: 0; /* Align left; adjust as needed */
+    z-index: 1; /* Ensures text appears behind the image */
+}
+
+header h2 {
+    font-size: 32px; /* Subheader size */
+    margin: 0; /* No margin */
+    font-weight: 600; /* Semi-bold weight */
+    position: relative;
+    z-index: 1; /* Ensure subheader is behind the image */
+}
+
+header p {
+    font-size: 30px; /* Paragraph size */
+    margin-top: 20px; /* Space above paragraph */
+    position: relative;
+    z-index: 1; /* Ensure paragraph is behind the image */
+}
+
+/* Profile Image Styling */
+.profile-image {
+    width: 400px; /* Increased size to 600px */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4); /* Add shadow for emphasis */
+    margin-top: -150px; /* Move image upwards to overlap the text */
+    position: relative; /* Positioned relative for stacking */
+    z-index: 10; /* Ensure image appears in front of the text */
+    opacity: 0.8; /* Slight transparency */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for smooth hover effects */
+}
+
+/* Hover Effect for Profile Image */
+.profile-image:hover {
+    opacity: 1; /* Full opacity on hover */
+    transform: scale(1.25); /* Slightly increase size on hover */
+}
+
+header {
+    text-align: center;
+    position: relative; /* Set position for overlap */
+}
+
+header h1, header h2, header p {
+    position: relative;
+    z-index: 1; /* Ensures text stays behind the image */
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #34495e;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #4ca1af;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 32px;
+    color: #2c3e50;
+    border-bottom: 2px solid #4ca1af;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Text and List Styling */
+p, li {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* YouTube Section */
+iframe {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* YouTube Link Styling */
+.youtube-link {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.youtube-link:hover {
+    background-color: darkred;
+    border-color: darkred;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #4ca1af;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #4ca1af;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Button Styling for Links */
+section a {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 20px;
+    background-color: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+section a:hover {
+    background-color: #4ca1af;
+}
+
+/* Scroll Button Styles */
+.scroll-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.scroll-btn:hover {
+    background-color: #4ca1af;
+}
+
+#about {
+    text-align: center; /* Center-aligns the text */
+    padding: 20px; /* Adds padding around the section */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#education {
+    padding: 20px; /* Adds padding around the section */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.education-entry {
+    margin-bottom: 15px; /* Space between entries */
+    padding: 15px; /* Adds padding inside each entry */
+    border: 1px solid #ccc; /* Border around each entry */
+    border-radius: 5px; /* Rounded corners for entry boxes */
+    background-color: #fff; /* White background for entry boxes */
+}
+
+.resume-link {
+    display: inline-block; /* Makes the link appear as a block */
+    padding: 10px 20px; /* Adds padding */
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Removes underline */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.resume-link:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+#projects {
+    padding: 60px 20px;
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project-entry {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light background for entries */
+}
+
+.project-entry h3 {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.project-entry p {
+    margin: 10px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 40px; /* Smaller header size for mobile */
+    }
+
+    header h2 {
+        font-size: 24px; /* Smaller subheader size for mobile */
+    }
+
+    header p {
+        font-size: 18px; /* Smaller paragraph size for mobile */
+    }
+
+    .profile-image {
+        width: 300px; /* Smaller profile image for mobile */
+    }
+
+    nav {
+        flex-direction: column; /* Stack nav items on mobile */
+    }
+
+    nav a {
+        padding: 10px 15px; /* Smaller padding for nav links */
+    }
+
+    section {
+        padding: 40px 10px; /* Smaller padding for sections on mobile */
+    }
+
+    .contact-form {
+        max-width: 90%; /* Full width for contact form on mobile */
+    }
+
+    .scroll-btn {
+        bottom: 15px; /* Adjust position for smaller screens */
+        right: 15px; /* Adjust position for smaller screens */
+    }
+}
