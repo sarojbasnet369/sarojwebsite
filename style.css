@@ -374,16 +374,6 @@ section {
     }
 }
 
-@media (max-width: 480px) {
-    /* Additional adjustments for very small screens */
-    h2 {
-        font-size: 1.2rem; /* Further decrease header size */
-    }
-
-    p {
-        font-size: 0.9rem; /* Further decrease paragraph size */
-    }
-}
 
 /* General Layout Styles */
 section {
@@ -393,7 +383,7 @@ section {
 }
 /* Responsive: Vertical Menu on Mobile */
 
-@media screen and (max-width: 100px) {
+@media screen and (max-width: 700px) {
     nav {
         flex-direction: column; /* Stack links vertically */
         align-items: center; /* Center align links */
