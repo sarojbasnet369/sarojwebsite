@@ -393,11 +393,17 @@ section {
 }
 /* Responsive: Vertical Menu on Mobile */
 
-@media screen and (max-width: 768px) {
-  nav a {
-    display: block; /* Make links stack vertically */
-    padding: 10px;
-    font-size: 16px;
-    text-align: left; /* Align text to the left */
-  }
+@media screen and (max-width: 400px) {
+    nav {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center align links */
+    }
+
+    nav a {
+        display: block; /* Stack links */
+        padding: 10px;
+        font-size: 16px;
+        text-align: left; /* Align text to the left */
+        width: 100%; /* Full width for each link */
+    }
 }
