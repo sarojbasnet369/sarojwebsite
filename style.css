@@ -419,8 +419,3 @@ section {
     width: 100%;
     height: 100%;
 }
-/* Responsive Image */
-.responsive-image {
-    max-width: 100%;  /* Allows the image to scale down */
-    height: auto;     /* Maintains aspect ratio */
-}
