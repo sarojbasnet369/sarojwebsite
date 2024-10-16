@@ -340,3 +340,55 @@ section a:hover {
 section {
     padding: 20px;
 }
+/* Base styles for the navigation menu */
+nav {
+    display: flex; /* Horizontal layout by default */
+    justify-content: space-around; /* Distributes links evenly */
+    background-color: #333; /* Background color of the nav */
+    padding: 10px; /* Padding around the nav */
+    position: fixed; /* Fix the nav at the top of the screen */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Styling for links */
+nav a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Padding for links */
+}
+
+/* Change link color on hover */
+nav a:hover {
+    background-color: #575757; /* Darker background on hover */
+}
+
+/* Media query for screens with max-width of 768px */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Change layout to vertical */
+        align-items: center; /* Center align items */
+        padding: 0; /* Remove padding for mobile */
+        background-color: #333; /* Ensure background color is consistent */
+    }
+
+    nav a {
+        width: 100%; /* Full width for links */
+        text-align: center; /* Center text in links */
+        padding: 15px; /* Increased padding for better touch targets */
+        border-top: 1px solid #444; /* Optional border between items */
+    }
+
+    /* Remove border from the first link */
+    nav a:first-child {
+        border-top: none; /* Remove top border for the first link */
+    }
+}
+
+/* Adding some margin to the top of the page content to prevent overlap with the fixed nav */
+body {
+    margin-top: 60px; /* Adjust this value based on the height of your nav */
+}
+
