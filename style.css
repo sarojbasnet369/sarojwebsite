@@ -391,32 +391,3 @@ section {
     margin: 0 auto; /* Center align */
     padding: 20px; /* General padding */
 }
-
-.profile-image {
-    max-width: 360px; /* Set a max width */
-    height: auto; /* Keep aspect ratio */
-}
-
-
-/* Responsive Image */
-.responsive-image {
-    max-width: 20%;  /* Allows the image to scale down */
-    height: auto;     /* Maintains aspect ratio */
-}
-/* Video Wrapper */
-.video-wrapper {
-    position: relative;
-    padding-top: 56.25%; /* 16:9 aspect ratio (Height/Width = 9/16 * 100) */
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%; /* Optional: Constrains video to the container's width */
-}
-
-/* Video Styling */
-.video-wrapper video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20%;
-    height: 20%;
-}
