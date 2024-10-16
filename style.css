@@ -323,8 +323,10 @@ section {
     padding: 20px;
 }
 
+
+
 /* Media Queries for Responsive Design */
-@media (max-width: 480px) {
+@media (max-width: 700px) {
     /* Header Adjustments */
     header {
         padding: 15px;
@@ -374,7 +376,7 @@ section {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
     /* Additional adjustments for very small screens */
     h2 {
         font-size: 1.2rem; /* Further decrease header size */
@@ -383,12 +385,5 @@ section {
     p {
         font-size: 0.9rem; /* Further decrease paragraph size */
     }
-}
-
-/* General Layout Styles */
-section {
-    max-width: 1200px; /* Set max-width for larger screens */
-    margin: 0 auto; /* Center align */
-    padding: 20px; /* General padding */
 }
 
