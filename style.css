@@ -393,7 +393,7 @@ section {
 }
 /* Responsive: Vertical Menu on Mobile */
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 480px) {
   nav a {
     display: block; /* Make links stack vertically */
     padding: 10px;
