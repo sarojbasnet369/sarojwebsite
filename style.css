@@ -295,42 +295,104 @@ section a:hover {
     margin: 10px 0;
 }
 
+
+#blog {
+    padding: 20px; /* Adds padding around the section */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.blog-entry {
+    margin-bottom: 15px; /* Space between entries */
+    padding: 15px; /* Adds padding inside each entry */
+    border: 1px solid #ccc; /* Border around each entry */
+    border-radius: 5px; /* Rounded corners for entry boxes */
+    background-color: #fff; /* White background for entry boxes */
+}
+
+.blog-entry h3 {
+    margin-top: 0; /* Removes top margin for the blog title */
+    color: #333; /* Dark color for the title */
+}
+
+.blog-entry p {
+    color: #555; /* Darker gray for paragraph text */
+}
+section {
+    padding: 20px;
+}
+
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 40px; /* Smaller header size for mobile */
+    /* Header Adjustments */
+    header {
+        padding: 15px;
     }
 
-    header h2 {
-        font-size: 24px; /* Smaller subheader size for mobile */
+    /* Navigation adjustments */
+    nav ul {
+        flex-direction: column; /* Stack navigation items */
+        padding: 0;
     }
 
-    header p {
-        font-size: 18px; /* Smaller paragraph size for mobile */
+    nav ul li {
+        margin: 5px 0; /* Adjust margin for stacked items */
     }
 
+    /* Profile Image */
     .profile-image {
-        width: 300px; /* Smaller profile image for mobile */
+        width: 80%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
     }
 
-    nav {
-        flex-direction: column; /* Stack nav items on mobile */
-    }
-
-    nav a {
-        padding: 10px 15px; /* Smaller padding for nav links */
-    }
-
+    /* Section Padding */
     section {
-        padding: 40px 10px; /* Smaller padding for sections on mobile */
+        padding: 15px; /* Adjust section padding */
     }
 
-    .contact-form {
-        max-width: 90%; /* Full width for contact form on mobile */
+    /* Text Size Adjustments */
+    h2 {
+        font-size: 1.5rem; /* Decrease header size */
     }
 
-    .scroll-btn {
-        bottom: 15px; /* Adjust position for smaller screens */
-        right: 15px; /* Adjust position for smaller screens */
+    p {
+        font-size: 1rem; /* Decrease paragraph size */
     }
+
+    /* Adjust the YouTube iframe */
+    iframe {
+        width: 100%; /* Full width for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Contact Form */
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%; /* Full width for inputs */
+        margin: 5px 0; /* Adjust margin */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Additional adjustments for very small screens */
+    h2 {
+        font-size: 1.2rem; /* Further decrease header size */
+    }
+
+    p {
+        font-size: 0.9rem; /* Further decrease paragraph size */
+    }
+}
+
+/* General Layout Styles */
+section {
+    max-width: 1200px; /* Set max-width for larger screens */
+    margin: 0 auto; /* Center align */
+    padding: 20px; /* General padding */
+}
+
+.profile-image {
+    max-width: 360px; /* Set a max width */
+    height: auto; /* Keep aspect ratio */
 }
