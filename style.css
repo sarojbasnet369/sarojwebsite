@@ -94,6 +94,24 @@ nav a:hover {
     border-radius: 5px;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Change to vertical layout */
+        align-items: stretch; /* Stretch items to full width */
+    }
+
+    nav a {
+        width: 100%; /* Full width for links */
+        margin: 5px 0; /* Vertical spacing between items */
+        text-align: left; /* Align text to the left */
+    }
+
+    /* Optional: Add hover effect */
+    nav a:hover {
+        background-color: #555; /* Background color on hover */
+    }
+}
 /* Section Styling */
 section {
     padding: 60px 20px;
