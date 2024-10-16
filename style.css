@@ -400,17 +400,16 @@ section {
 
 /* Responsive Image */
 .responsive-image {
-    max-width: 100%;  /* Allows the image to scale down */
+    max-width: 20%;  /* Allows the image to scale down */
     height: auto;     /* Maintains aspect ratio */
 }
 /* Video Wrapper */
 .video-wrapper {
     position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio (Height/Width = 9/16 * 100) */
     overflow: hidden;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    /* For a 4:3 Aspect Ratio, use padding-top: 75%; */
-    max-width: 100%; /* Prevents it from overflowing the screen */
-    margin: 0 auto; /* Centers the video wrapper */
+    width: 100%;
+    max-width: 100%; /* Optional: Constrains video to the container's width */
 }
 
 /* Video Styling */
@@ -418,6 +417,6 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 20%;
+    height: 20%;
 }
