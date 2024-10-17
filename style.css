@@ -732,7 +732,7 @@ section a:hover {
 
 #blog {
     padding: 50px 30px; /* Generous padding for spacing */
-    background-color: #c8ffbd; /* background color */
+    background-color: #dcdedc; /* background color */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     max-width: 900px; /* Limit the width for better readability */
@@ -749,7 +749,7 @@ section a:hover {
 
 #blog p {
     font-size: 18px; /* Standard font size */
-    color: #555; /* Darker text color for readability */
+    color: #0a0a0a; /* Darker text color for readability */
     text-align: center; /* Center-align introductory text */
     margin-bottom: 30px; /* Space below introductory paragraph */
 }
