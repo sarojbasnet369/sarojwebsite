@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-	<!-- Other head elements -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <title>Saroj Basnet</title>
+
+<style>
+        .section {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
 </head>
+
+
 <body>
     <header> 
 
@@ -18,25 +27,27 @@
         <p>Mechanical Engineering Student | YouTuber </p>
 
     </header>
-<nav>
-<a href="#about">About Me</a>
-<a href="#youtube">YouTube Videos</a>
-<a href="#skills">Skills</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#achievements">Achievements</a>
-<a href="#blog">Blog</a>
-<a href="#resume">Resume</a>
-<!--<a href="#research">Research</a> -->
-<a href="#contact">Contact</a>
-</nav>  
+
+
+<div class="menu">
+        <button onclick="showSection('aboutMe')">About Me</button>
+        <button onclick="showSection('youtube')">YouTube Videos</button>
+        <button onclick="showSection('skills')">Skills</button>
+        <button onclick="showSection('portfolio')">Portfolio</button>
+        <button onclick="showSection('achievements')">Achievements</button>
+        <button onclick="showSection('blog')">Blog</button>
+        <button onclick="showSection('resume')">Resume</button>
+        <button onclick="showSection('contact')">Contact</button>
+    </div> 
   
 
 
 
-<section id="about">
+
+<section id="aboutMe" class="section active">
     <h2>ABOUT ME</h2>
    
-    <p>Hello, I'm Saroj Basnet, a final-year Mechanical Engineering student at IOE Pulchowk Campus. My academic journey has fueled my passion for mechanical design, automation, and AI/ML. </p> 
+    <p>Hello, I'm Saroj Basnet, a final-year(8th semester) Mechanical Engineering student at IOE Pulchowk Campus. My academic journey has fueled my passion for mechanical design, automation, and AI/ML. </p> 
 <!-- <p> Growing up in a village where traditional methods of making local alcohol 'Raksi' piqued my curiosity, I chose to focus my final-year project on modernizing this process. My project, titled "Fabrication of Modified Distillation Apparatus by CFD Analysis of Distillation Process of Traditional Nepali Alcohol, Raksi", combines traditional knowledge with modern engineering techniques.</p>
 -->
     <p>Beyond my academic work, I am deeply interested in 3D design and have worked on various hands-on projects, including the Fabrication of a Plastic Injection Molding Machine. Additionally, I run a YouTube channel where I create educational content to support students preparing for engineering entrance exams in Nepal.</p>
@@ -52,7 +63,7 @@
    
 
 
- <section id="youtube">
+ <section id="youtube" class="section">
     <h2>YouTube</h2>
     <p>Welcome to my YouTube channel! Here, you’ll find a variety of videos designed to help you prepare for engineering entrance exams, share valuable tips, and enjoy some light-hearted comedy. Check out my latest content below and don’t forget to subscribe for more updates!</p>
    
@@ -62,24 +73,28 @@
 	
 <p>Explore the following categories:</p>
 
-    <!-- IOE Entrance Question Videos -->
+ <!-- IOE Entrance Question Videos -->
+<h3 class="category-title"></h3>
 <a href="https://youtube.com/playlist?list=PLLDUoQyRI9s3Xy2304NnikzgbDRPeWgsI&si=d4hIH2PvhqUa0mtc" target="_blank" class="youtube-link"><strong>IOE Entrance Questions</strong></a>
-    <div class="video-container">
-        <iframe width="480" height="270" src="https://www.youtube.com/embed/L6TVelzPSWY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="480" height="270" src="https://www.youtube.com/embed/MsPqadTzJMs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="480" height="270" src="https://www.youtube.com/embed/XcHplCD2PrY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+<div class="video-container">
+    <iframe width="480" height="270" src="https://www.youtube.com/embed/L6TVelzPSWY" frameborder="0" allowfullscreen></iframe>
+    <iframe width="480" height="270" src="https://www.youtube.com/embed/MsPqadTzJMs" frameborder="0" allowfullscreen></iframe>
+    <iframe width="480" height="270" src="https://www.youtube.com/embed/XcHplCD2PrY" frameborder="0" allowfullscreen></iframe>
+</div>
 
-    <!-- Information/Tips Videos -->
+<!-- Information/Tips Videos -->
+<h3 class="category-title"></h3>
 <a href="https://youtube.com/playlist?list=PLLDUoQyRI9s0rdU4k22YWc4rglt2_gs30&si=7g40rWJPkVtnBZDU" target="_blank" class="youtube-link"><strong>IOE Informative</strong></a>
+<div class="video-container">
+    <iframe width="480" height="270" src="https://www.youtube.com/embed/U1nVjCYNOA8" frameborder="0" allowfullscreen></iframe>
+    <iframe width="480" height="270" src="https://www.youtube.com/embed/TvF1ZqT6tsI" frameborder="0" allowfullscreen></iframe>
+    <iframe width="480" height="270" src="https://www.youtube.com/embed/hWviU8Z6IZQ" frameborder="0" allowfullscreen></iframe>
+</div>
 
-    <div class="video-container">
-        <iframe width="480" height="270" src="https://www.youtube.com/embed/U1nVjCYNOA8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="480" height="270" src="https://www.youtube.com/embed/TvF1ZqT6tsI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="480" height="270" src="https://www.youtube.com/embed/hWviU8Z6IZQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+
 
     <!-- Comedy Videos -->
+<h3 class="category-title"></h3>
 <a href="https://youtube.com/playlist?list=PLLDUoQyRI9s2QbV6dI7GPVHhnRUqGnd6R&si=mDRixoMaKtVZwh4Q" target="_blank" class="youtube-link"><strong>Comedy</strong></a>
 
     <div class="video-container">
@@ -89,6 +104,7 @@
     </div>
 
     <!-- Vlog Videos -->
+<h3 class="category-title"></h3>
 <a href="https://youtube.com/playlist?list=PLLDUoQyRI9s1-Q-gUeO1tClXqog0j3qh7&si=UdMcQDJtSTBpBMc8" target="_blank" class="youtube-link"><strong>Vlog</strong></a>
 
     <div class="video-container">
@@ -102,30 +118,25 @@
 
 
 
-
-
-
-
-<section id="skills">
+<section id="skills" class="section">
     <h2>SKILLS</h2>
     
     <ul>
-        <li><strong>CAD Design:</strong> Proficient in SolidWorks, AutoCAD, and Blender for mechanical component and system design.</li>
-        <li><strong>CFD & Simulation:</strong> Experience with ANSYS for computational fluid dynamics (CFD).</li>
-        <li><strong>Programming:</strong> Knowledge of HTML, C-programming and MATLAB for simulation, and optimization.</li>
-        <li><strong>Prototyping & Fabrication:</strong> Hands-on experience in designing and fabricating prototypes, including plastic injection molding machines.</li>
-        <li><strong>Fluid Simulation:</strong> Beginner in fluid simulation but actively learning through practical projects.</li>
-	<li><strong>Video Editing:</strong> Proficient in Adobe Premiere Pro for video editing, including producing educational content for YouTube.</li>
-        <li><strong>Image Editing:</strong> Skilled in GIMP for graphic design and image editing, used in creating thumbnails, memes, graphics, and more.</li>
-        <li><strong>Data Analysis & Documentation:</strong> Advanced skills in Microsoft Excel for data analysis, charting, and reporting, as well as LaTeX for writing technical reports and papers.</li>
-      
+       <li><strong>CAD Design:</strong> Proficient in SolidWorks, AutoCAD, and Blender, with a focus on mechanical component and system design.</li>
+        <li><strong>CFD & Simulation:</strong> Actively enhancing skills in ANSYS for computational fluid dynamics (CFD) applications.</li>
+        <li><strong>Programming:</strong> Familiar with HTML, C programming, and MATLAB, applied in simulation and optimization tasks.</li>
+        <li><strong>Prototyping & Fabrication:</strong> Experienced in designing and fabricating prototypes, including plastic injection molding machines.</li>
+        <li><strong>Fluid Simulation:</strong> Developing expertise in fluid simulation through hands-on projects.</li>
+        <li><strong>Video Editing:</strong> Basic proficiency in Adobe Premiere Pro, focusing on the production of educational content for YouTube.</li>
+        <li><strong>Image Editing:</strong> Competent in GIMP for graphic design and image editing, utilized for creating thumbnails, memes, and various graphics.</li>
+        <li><strong>Data Analysis & Documentation:</strong> Knowledgeable in Microsoft Excel for data analysis, chart creation, and reporting, alongside proficiency in LaTeX for composing technical reports and papers.</li>
     </ul>
 </section>
 
 
 
 
-<section id="portfolio">
+<section id="portfolio" class="section">
     <h2>PORTFOLIO</h2>
 
         <p>Here’s a showcase of my key projects and work in mechanical engineering design and analysis:</p>
@@ -155,7 +166,7 @@
 
         <li>
             <h3>3D Design & Modeling</h3>
-            <p>Here is a simple Nut-Bolt animation designed in Solidworks.(This video is just for testing video upload)</p>
+            <p>Here is a simple Nut-Bolt animation designed in Solidworks. (This video is just for testing video upload)</p>
 <video width="300" height="auto" controls>
     <source src="Videos/Nut Bolt.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -163,22 +174,22 @@
 
 
         </li>
-
         <li>
             <h3>Internship at Gorkha Brewery Pvt. Ltd.</h3>
-            <p>During my 1 month internship at Gorkha Brewery, I worked in the utility department. My key responsibilities included documentation of machine parts, and their analysis.</p>
-	<!--<a href="PDF/Intern report.pdf">Read report here...</a>            
-	<img src="Photos/GB intern.png" alt="Gorkha Brewery Internship" style="width: 360px; height: auto;" class="responsive-image" />
---->
+           <p>During a one-month internship at Gorkha Brewery, responsibilities primarily involved the utility department. Key tasks included creating plant layouts, conducting audits, documenting machine parts, and analyzing losses associated with equipment.</p>
+	<!-- <a href="PDF/Intern report.pdf">Read report here...</a>   
+	--->         
+		<img src="Photos/GB intern.jpg" alt="Gorkha Brewery Internship" style="width: 300px; height: auto;" class="responsive-image" />
+	
         </li>
     </ul>
 
-    <p>More projects and detailed analysis can be found on my <a href="https://github.com/sarojbasnet369">GitHub profile</a></p>
+    <p>More projects and detailed analysis can be found on my <a href="https://github.com/sarojbasnet369">GitHub Profile</a></p>
 </section>
 
   
 
-<section id="achievements">
+<section id="achievements" class="section">
     <h2>Achievements & Certifications</h2>
     <ul>
         <li>Secured 3rd rank in the IOE BE/BArch Entrance Exam - 2077</li>
@@ -191,7 +202,7 @@
 
 
 
-<section id="blog">
+<section id="blog" class="section">
     <h2>BLOGS</h2>
     <p>Welcome to my blog! Here, I share my thoughts, insights, and experiences in the field of IOE Entrance, mechanical engineering, technology, and beyond. Feel free to explore my latest posts!</p>
 
@@ -226,7 +237,7 @@
 
 
 	
-<section id="resume">
+<section id="resume" class="section">
     	<h2>RESUME</h2>
 <h3>Education</h3>
    <!-- <ul>
@@ -267,13 +278,13 @@
 
 
 
-<!-- <section id="research">
+<!-- <section id="research" class="section">
     <h2>Research</h2>
 </section>
 -->
 
 
-<section id="contact">
+<section id="contact" class="section">
     <h2>CONTACT</h2>
    <!-- <form class="contact-form" action="send_email.php" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
@@ -339,5 +350,27 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
         });
     </script>
+
+
+<script>
+        // JavaScript to show the selected section and hide others
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Show 'About Me' by default on page load
+        window.onload = function() {
+            showSection('aboutMe');
+        };
+    </script>
+
+
 </body>
 </html>
