@@ -71,8 +71,46 @@ header h1, header h2, header p {
     z-index: 1; /* Ensures text stays behind the image */
 }
 
+/* Menu container styles */
+.menu {
+    display: flex;              /* Use flexbox for layout */
+    flex-wrap: wrap;           /* Allow buttons to wrap in smaller screens */
+    justify-content: center;    /* Center align the buttons */
+    margin: 20px 0;            /* Margin above and below the menu */
+}
 
+/* Button styles */
+.menu button {
+    background-color: #007bff; /* Blue background color */
+    color: white;               /* White text color */
+    border: none;               /* No border */
+    border-radius: 5px;        /* Rounded corners */
+    padding: 10px 15px;        /* Padding around the button */
+    margin: 5px;               /* Space between buttons */
+    cursor: pointer;            /* Change cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+    font-size: 16px;           /* Font size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
 
+/* Button hover effects */
+.menu button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slightly lift button on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;  /* Stack buttons vertically on small screens */
+        align-items: center;      /* Center align buttons */
+    }
+    .menu button {
+        width: 80%;               /* Make buttons wider on small screens */
+    }
+}
+
+<!---
 /* General Styles for Navigation */
 nav {
   background-color: #333;
@@ -117,7 +155,7 @@ nav a:hover {
     width: 100%;
   }
 }
-
+--->
 
 
 
@@ -268,81 +306,55 @@ section a:hover {
 
 
 
-#about {
-    text-align: center; /* Center-aligns the text */
-    padding: 50px 30px; /* Generous padding for breathing room */
-    background: linear-gradient(135deg, #f9f9f9 0%, #e6f7ff 100%); /* Gradient background for depth */
-    border-radius: 15px; /* More pronounced rounded corners */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1); /* Stronger shadow for added depth */
-    max-width: 800px; /* Limits the width for better readability */
-    margin: 30px auto; /* Centers the section with margin */
-    font-family: 'Poppins', sans-serif; /* Modern font for clean look */
-    line-height: 1.7; /* Improves line spacing for better readability */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition effects */
+
+/* Styles for the About Me section */
+#aboutMe {
+    padding: 20px;                        /* Padding around the section */
+    background-color: #f9f9f9;            /* Light gray background for contrast */
+    border-radius: 8px;                   /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 20px auto;                    /* Centering the section with margin */
+    max-width: 800px;                     /* Maximum width for readability */
 }
 
-#about:hover {
-    transform: translateY(-5px); /* Subtle lift effect on hover */
-    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+/* Header styles */
+#aboutMe h2 {
+    font-size: 28px;                      /* Large font size for the heading */
+    color: #333;                          /* Dark text color for contrast */
+    text-align: center;                   /* Center the heading */
+    margin-bottom: 20px;                  /* Margin below the heading */
 }
 
-/* Heading Styling */
-#about h2 {
-    font-size: 36px; /* Larger font size for emphasis */
-    margin-bottom: 20px; /* Space below the heading */
-    color: #2c3e50; /* Deep gray for contrast */
-    font-family: 'Montserrat', sans-serif; /* Clean sans-serif font */
-    letter-spacing: 2px; /* Increased letter spacing for a modern look */
-    text-transform: uppercase; /* Makes the heading more prominent */
+/* Paragraph styles */
+#aboutMe p {
+    font-size: 16px;                      /* Font size for the text */
+    line-height: 1.6;                     /* Increased line height for better readability */
+    color: #555;                          /* Slightly lighter text color */
+    margin-bottom: 15px;                  /* Space between paragraphs */
 }
 
-/* Paragraph Styling */
-#about p {
-    font-size: 20px; /* Slightly larger font size for readability */
-    color: #555; /* Soft dark color for text */
-    max-width: 700px; /* Limits the paragraph width for readability */
-    margin: 0 auto; /* Centers the paragraph */
-    text-align: justify; /* Justifies text for a clean, polished look */
-    padding: 0 15px; /* Adds side padding for mobile devices */
+/* Highlighting important information */
+#aboutMe p strong {
+    color: #e74c3c;                       /* Red color for emphasized text */
+    font-weight: bold;                    /* Bold font for emphasis */
 }
 
-/* Call-to-action Button */
-#about a {
-    display: inline-block; /* Makes the link behave like a button */
-    margin-top: 20px; /* Space above the button */
-    padding: 12px 25px; /* Button padding */
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    text-decoration: none; /* No underline */
-    border-radius: 25px; /* Rounded corners for button */
-    font-size: 18px; /* Font size for the button */
-    transition: background-color 0.3s, transform 0.3s; /* Button hover effects */
-}
-
-#about a:hover {
-    background-color: #45a049; /* Darker green on hover */
-    transform: translateY(-3px); /* Slight lift effect on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #about {
-        padding: 30px 15px; /* Adjusts padding for smaller screens */
+/* Responsive styles */
+@media (max-width: 600px) {
+    #aboutMe {
+        padding: 15px;                    /* Reduced padding on small screens */
     }
 
-    #about h2 {
-        font-size: 28px; /* Smaller heading on mobile */
+    #aboutMe h2 {
+        font-size: 24px;                  /* Slightly smaller heading on mobile */
     }
 
-    #about p {
-        font-size: 18px; /* Smaller paragraph text on mobile */
-    }
-
-    #about a {
-        font-size: 16px; /* Smaller button text on mobile */
-        padding: 10px 20px; /* Smaller button padding */
+    #aboutMe p {
+        font-size: 14px;                  /* Slightly smaller font size for paragraphs */
     }
 }
+
+
 
 
 /* YouTube Section Styles */
@@ -367,14 +379,23 @@ section a:hover {
 }
 
 .youtube-link {
-    color: #ffffff; /* white Link color */
+    color: #ffffff; /* White link color */
     text-decoration: none; /* Remove underline */
     transition: color 0.3s ease; /* Smooth color change */
     font-weight: bold; /* Make link stand out */
 }
 
 .youtube-link:hover {
-    color: #0008ff; /* Darkerred on hover */
+    color: #0008ff; /* Adjust to the desired hover color */
+}
+
+/* Category Styles */
+.category-title {
+    font-size: 1.5em; /* Slightly larger font for category titles */
+    color: #444; /* Color for category titles */
+    margin: 20px 0 10px; /* Space around category titles */
+    border-bottom: 2px solid #ccc; /* Underline for separation */
+    padding-bottom: 5px; /* Padding below category titles */
 }
 
 /* Video Container Styles */
@@ -389,11 +410,12 @@ section a:hover {
     flex: 1 1 calc(30% - 20px); /* Responsive video size (3 per row) */
     min-width: 300px; /* Minimum width for videos */
     border-radius: 8px; /* Rounded corners for iframes */
-    transition: transform 0.3s ease; /* Smooth scaling on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling on hover */
 }
 
 .video-container iframe:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
 }
 
 /* Additional Responsive Styles */
@@ -408,6 +430,8 @@ section a:hover {
         flex: 1 1 100%; /* Show 1 video on small screens */
     }
 }
+
+
 
 
 
@@ -642,16 +666,21 @@ section a:hover {
     margin: 10px 0; /* Space around media elements */
 }
 
+
 /* Link styling */
 #portfolio a {
-    color: #4CAF50; /* Green color for links */
+    color: #007BFF; /* Bright blue color for links */
     text-decoration: none; /* No underline */
     font-weight: bold; /* Bold for emphasis */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
 }
 
 #portfolio a:hover {
+    color: #0056b3; /* Darker blue on hover for better visibility */
     text-decoration: underline; /* Underline on hover for emphasis */
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -878,13 +907,13 @@ section a:hover {
 
 .social-media a {
     text-decoration: none; /* Remove underline from links */
-    color: #007bff; /* Blue color for icons */
+    color: #0277f5; /* Blue color for icons */
     font-size: 30px; /* Increase icon size */
     transition: color 0.3s; /* Smooth transition for color */
 }
 
 .social-media a:hover {
-    color: #fc053b; /* Darker blue on hover */
+    color: #033f80; /* Darker blue on hover */
 }
 
 /* Responsive Design */
