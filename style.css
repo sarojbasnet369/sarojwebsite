@@ -10,66 +10,98 @@ body {
 
 /* Header Styling */
 header {
-    background: linear-gradient(to right, #3bf790, #3b6df7); /* Gradient background */
-    color: white; /* Text color */
-    padding: 100px 0; /* Increase padding for more space */
-    text-align: center; /* Center text */
-    position: relative; /* Relative position for text */
+    background: linear-gradient(to right, #3bf790, #3b6df7);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
 }
 
+/* Oscillating Header Text */
 header h1 {
-    font-size: 60px; /* Header size */
-    margin: 0; /* No margin */
-    font-weight: 1000; /* Bold weight */
+    font-size: 60px;
+    margin: 0;
+    font-weight: 1000;
+    animation: smoothHorizontalOscillate 9s ease-in-out infinite;
     position: relative;
-    top: 0px; /* Move down 0px from the top of the header */
-    left: 0; /* Align left; adjust as needed */
-    z-index: 1; /* Ensures text appears behind the image */
+    z-index: 1; /* Lower z-index to place behind the image */
+}
+
+header h2, header p {
+    font-weight: 600;
+    position: relative;
+    z-index: 1; /* Ensure they stay behind the image */
 }
 
 header h2 {
-    font-size: 32px; /* Subheader size */
-    margin: 0; /* No margin */
-    font-weight: 600; /* Semi-bold weight */
-    position: relative;
-    z-index: 1; /* Ensure subheader is behind the image */
+    font-size: 32px;
+    margin: 0;
 }
 
 header p {
-    font-size: 30px; /* Paragraph size */
-    margin-top: 20px; /* Space above paragraph */
-    position: relative;
-    z-index: 1; /* Ensure paragraph is behind the image */
+    font-size: 30px;
+    margin-top: 20px;
 }
 
 /* Profile Image Styling */
 .profile-image {
-    width: 400px; 
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Make it circular */
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4); /* Add shadow for emphasis */
-    margin-top: -150px; /* Move image upwards to overlap the text */
-    position: relative; /* Positioned relative for stacking */
-    z-index: 10; /* Ensure image appears in front of the text */
-    opacity: 0.8; /* Slight transparency */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for smooth hover effects */
+    width: 400px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
+    margin-top: -150px;
+    position: relative; /* Required for z-index stacking */
+    z-index: 10; /* Higher z-index to stay in front of text */
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* Hover Effect for Profile Image */
 .profile-image:hover {
-    opacity: 1; /* Full opacity on hover */
-    transform: scale(1.25); /* Slightly increase size on hover */
+    opacity: 1;
+    transform: scale(1.25);
 }
 
-header {
-    text-align: center;
-    position: relative; /* Set position for overlap */
+/* Animation for h1 */
+@keyframes smoothHorizontalOscillate {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-35px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(35px);
+    }
 }
 
-header h1, header h2, header p {
-    position: relative;
-    z-index: 1; /* Ensures text stays behind the image */
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 50px 0;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    header h2 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 20px;
+    }
+
+    .profile-image {
+        width: 250px;
+        margin-top: -100px;
+    }
 }
+
 
 /* Menu container styles */
 .menu {
@@ -110,52 +142,6 @@ header h1, header h2, header p {
     }
 }
 
-<!---
-/* General Styles for Navigation */
-nav {
-  background-color: #333;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px;
-  font-family: Arial, sans-serif;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  font-size: 18px;
-}
-
-nav a:hover {
-  background-color: #555;
-  border-radius: 5px;
-  transition: 0.3s ease;
-}
-
-/* Desktop View */
-@media (min-width: 768px) {
-  nav {
-    flex-direction: row;
-  }
-}
-
-/* Mobile View */
-@media (max-width: 767px) {
-  nav {
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px 0;
-  }
-
-  nav a {
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-  }
-}
---->
 
 
 
