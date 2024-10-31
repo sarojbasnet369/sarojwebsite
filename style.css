@@ -103,6 +103,22 @@ header p {
 }
 
 
+.glitter-effect {
+    font-size: 18px;
+    font-weight: bold;
+    animation: popUp 2s ease-in-out;
+}
+
+/* Pop-up effect */
+@keyframes popUp {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Glittering effect */
+
+
+
 /* Menu container styles */
 .menu {
     display: flex;              /* Use flexbox for layout */
@@ -371,9 +387,6 @@ section a:hover {
     font-weight: bold; /* Make link stand out */
 }
 
-.youtube-link:hover {
-    color: #0008ff; /* Adjust to the desired hover color */
-}
 
 /* Category Styles */
 .category-title {
