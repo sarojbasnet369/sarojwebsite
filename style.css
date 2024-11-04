@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    background-color: #4682B4; /* Light blue background */
+    background: linear-gradient(to bottom,  #151fb0, #12b1e6);
     color: #000000; /* Black text color */
     line-height: 1;
     margin: 0;
@@ -8,50 +8,16 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Header Styling */
-header {
-    background: linear-gradient(to right, #3bf790, #3b6df7);
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-    position: relative;
-}
 
-/* Oscillating Header Text */
-header h1 {
-    font-size: 100px;
-    margin: 0;
-    font-weight: 1000;
-    position: relative;
-    z-index: 1; /* Lower z-index to place behind the image */
-}
 
-header h2, header p {
-    font-weight: 600;
-    position: relative;
-    z-index: 1; /* Ensure they stay behind the image */
-}
-
-header h2 {
-    font-size: 32px;
-    margin: 0;
-}
-
-header p {
-    font-size: 30px;
-    margin-top: 20px;
-}
-
-/* Profile Image Styling */
+/* Profile Image Styling (on the left) */
 .profile-image {
-    width: 400px;
+    width: 250px;
     height: auto;
     border-radius: 50%;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
-    margin-top: -150px;
-    position: relative; /* Required for z-index stacking */
-    z-index: 10; /* Higher z-index to stay in front of text */
-    opacity: 0.8;
+    margin-right: 50px;
+    opacity: 0.9;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -61,53 +27,43 @@ header p {
     transform: scale(1.25);
 }
 
-/* Animation for h1 */
-@keyframes smoothHorizontalOscillate {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-35px);
-    }
-    50% {
-        transform: translateX(0);
-    }
-    75% {
-        transform: translateX(35px);
-    }
-}
 
-/* Media Query for Responsiveness */
-@media (max-width: 768px) {
-    header {
-        padding: 50px 0;
-    }
-
-    header h1 {
-        font-size: 40px;
-    }
-
-    header h2 {
-        font-size: 24px;
-    }
-
-    header p {
-        font-size: 20px;
-    }
-
-    .profile-image {
-        width: 250px;
-        margin-top: -100px;
-    }
+/* Flexbox for header container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
 }
 
 
-/* Glittering effect */
+/* Text Styling on the right */
+.header-text {
+    text-align: left;
+}
+
+.header-text h1 {
+    font-size: 72px;
+    margin: 0;
+    font-weight: 1000;
+}
+
+
+.header-text p {
+    font-size: 16px;
+    margin-top: 2px;
+}
+
 .glitter-effect {
-    font-size: 25px;
-    font-weight: bold;
-    animation: popUp 2s ease-in-out;
+    font-size: 25px; /* Existing font size */
+    font-weight: bold; /* Existing font weight */
+    font-style: italic; /* Makes the text italic */
+    animation: popUp 2s ease-in-out; /* Existing animation */
 }
+
+
 
 /* Pop-up effect */
 @keyframes popUp {
@@ -115,48 +71,39 @@ header p {
     100% { transform: scale(1); opacity: 1; }
 }
 
-
-
-
-
-/* Menu container styles */
-.menu {
-    display: flex;              /* Use flexbox for layout */
-    flex-wrap: wrap;           /* Allow buttons to wrap in smaller screens */
-    justify-content: center;    /* Center align the buttons */
-    margin: 20px 0;            /* Margin above and below the menu */
-}
-
-/* Button styles */
-.menu button {
-    background-color: #007bff; /* Blue background color */
-    color: white;               /* White text color */
-    border: none;               /* No border */
-    border-radius: 5px;        /* Rounded corners */
-    padding: 10px 15px;        /* Padding around the button */
-    margin: 5px;               /* Space between buttons */
-    cursor: pointer;            /* Change cursor on hover */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
-    font-size: 16px;           /* Font size */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
-
-/* Button hover effects */
-.menu button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: translateY(-2px); /* Slightly lift button on hover */
-}
-
-/* Responsive styles */
-@media (max-width: 600px) {
-    .menu {
-        flex-direction: column;  /* Stack buttons vertically on small screens */
-        align-items: center;      /* Center align buttons */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
     }
-    .menu button {
-        width: 80%;               /* Make buttons wider on small screens */
+    
+    .profile-image {
+        margin: 0 auto 20px;
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+    }
+
+    .header-text p {
+        font-size: 16px;
     }
 }
+
+
+/* Footer Styling */
+footer {
+    color: black;
+    text-align: center;
+    padding: 0 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+
 
 
 
@@ -173,7 +120,7 @@ section {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 36px;
     color: #2c3e50;
     border-bottom: 2px solid #4ca1af;
     padding-bottom: 10px;
@@ -258,17 +205,7 @@ iframe {
     background-color: #4ca1af;
 }
 
-/* Footer Styling */
-footer {
-    background-color: #34495e;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-size: 16px;
-}
+
 
 /* Button Styling for Links */
 section a {
@@ -286,75 +223,29 @@ section a:hover {
     background-color: #4ca1af;
 }
 
+
+
 /* Scroll Button Styles */
 .scroll-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: none;
-    background-color: #2c3e50;
+    background-color: #000000;
     color: white;
     padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .scroll-btn:hover {
-    background-color: #4ca1af;
+    
+    transform: scale(1.1);
+
 }
 
-
-
-
-
-/* Styles for the About Me section */
-#aboutMe {
-    padding: 20px;                        /* Padding around the section */
-    background-color: #f9f9f9;            /* Light gray background for contrast */
-    border-radius: 8px;                   /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    margin: 20px auto;                    /* Centering the section with margin */
-    max-width: 800px;                     /* Maximum width for readability */
-}
-
-/* Header styles */
-#aboutMe h2 {
-    font-size: 28px;                      /* Large font size for the heading */
-    color: #333;                          /* Dark text color for contrast */
-    text-align: center;                   /* Center the heading */
-    margin-bottom: 20px;                  /* Margin below the heading */
-}
-
-/* Paragraph styles */
-#aboutMe p {
-    font-size: 16px;                      /* Font size for the text */
-    line-height: 1.6;                     /* Increased line height for better readability */
-    color: #555;                          /* Slightly lighter text color */
-    margin-bottom: 15px;                  /* Space between paragraphs */
-}
-
-/* Highlighting important information */
-#aboutMe p strong {
-    color: #e74c3c;                       /* Red color for emphasized text */
-    font-weight: bold;                    /* Bold font for emphasis */
-}
-
-/* Responsive styles */
-@media (max-width: 600px) {
-    #aboutMe {
-        padding: 15px;                    /* Reduced padding on small screens */
-    }
-
-    #aboutMe h2 {
-        font-size: 24px;                  /* Slightly smaller heading on mobile */
-    }
-
-    #aboutMe p {
-        font-size: 14px;                  /* Slightly smaller font size for paragraphs */
-    }
-}
 
 
 
@@ -362,22 +253,27 @@ section a:hover {
 /* YouTube Section Styles */
 #youtube {
     background-color: #fff; /* White background for contrast */
-    padding: 20px; /* Add padding for spacing */
-    border-radius: 8px; /* Rounded corners */
+    padding: 50px 30px; 
+    border-radius: 12px; /* Rounded corners */ 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 20px 0; /* Space above and below the section */
+    margin: 20px auto; /* Space above and below the section */ 
+    text-align: center; /* Center the text */
+    max-width: 1080px;
 }
+
 
 #youtube h2 {
     color: #333; /* Darker color for the heading */
     margin-bottom: 15px; /* Space below heading */
-    font-size: 1.8em; /* Larger font size for emphasis */
+    font-size: 36px;
+    text-align: center; /* Center the text */
 }
 
 #youtube p {
     color: #555; /* Slightly lighter color for body text */
     margin-bottom: 20px; /* Space below paragraphs */
     line-height: 1.5; /* Improve readability */
+text-align: left; /* Align the text to the left */
 }
 
 .youtube-link {
@@ -395,6 +291,7 @@ section a:hover {
     margin: 20px 0 10px; /* Space around category titles */
     border-bottom: 2px solid #ccc; /* Underline for separation */
     padding-bottom: 5px; /* Padding below category titles */
+text-align: left; /* Align the text to the left */
 }
 
 /* Video Container Styles */
@@ -407,7 +304,7 @@ section a:hover {
 
 .video-container iframe {
     flex: 1 1 calc(30% - 20px); /* Responsive video size (3 per row) */
-    min-width: 300px; /* Minimum width for videos */
+    min-width: 200px; /* Minimum width for videos */
     border-radius: 8px; /* Rounded corners for iframes */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling on hover */
 }
@@ -439,7 +336,7 @@ section a:hover {
     background-color: #e3f2fd; /* Soft light blue background */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 800px; /* Limit the width for better readability */
+    max-width: 900px; /* Limit the width for better readability */
     margin: 30px auto; /* Center the section */
     font-family: 'Open Sans', sans-serif; /* Clean font for readability */
 }
@@ -491,7 +388,7 @@ section a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     #resume h2 {
-        font-size: 30px; /* Smaller heading on mobile */
+        font-size: 28px; /* Smaller heading on mobile */
     }
 
     .education-entry {
@@ -528,7 +425,7 @@ section a:hover {
 
 /* Heading Styling */
 #skills h2 {
-  font-size: 34px;
+  font-size: 36px;
   text-align: center;
   color: #2c3e50; /* Deep gray for better contrast */
   margin-bottom: 30px;
@@ -623,12 +520,13 @@ section a:hover {
     color: #2c3e50; /* Dark gray for good contrast */
     text-align: center; /* Center the heading */
     margin-bottom: 20px; /* Space below the heading */
+   
 }
 
 #portfolio p {
     font-size: 18px; /* Standard font size */
     color: #555; /* Darker text color for readability */
-    text-align: center; /* Center-aligning introductory text */
+    text-align: left; /* Center-aligning introductory text */
     margin-bottom: 30px; /* Space below paragraph */
 }
 
@@ -707,7 +605,7 @@ section a:hover {
     background-color: #e8f5e9; /* Soft light green background */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 800px; /* Limit the width for better readability */
+    max-width: 900px; /* Limit the width for better readability */
     margin: 30px auto; /* Center the section */
     font-family: 'Open Sans', sans-serif; /* Clean font for readability */
 }
@@ -748,7 +646,7 @@ section a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     #achievements h2 {
-        font-size: 30px; /* Smaller heading on mobile */
+        font-size: 28px; /* Smaller heading on mobile */
     }
 
     #achievements li {
@@ -778,7 +676,7 @@ section a:hover {
 #blog p {
     font-size: 18px; /* Standard font size */
     color: #0a0a0a; /* Darker text color for readability */
-    text-align: center; /* Center-align introductory text */
+    text-align: left; /* Center-align introductory text */
     margin-bottom: 30px; /* Space below introductory paragraph */
 }
 
@@ -822,7 +720,7 @@ section a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     #blog h2 {
-        font-size: 30px; /* Smaller heading on mobile */
+        font-size: 28px; /* Smaller heading on mobile */
     }
 
     #blog p {
@@ -842,9 +740,10 @@ section a:hover {
     background-color: #f9f9f9; /* Light background for the contact section */
     padding: 20px; /* Add some padding */
     border-radius: 10px; /* Rounded corners */
-    max-width: 500px; /* Limit the width of the form */
+    max-width: 900px; /* Limit the width of the form */
     margin: auto; /* Center the form */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+   text-align: center; /* Center the text */
 }
 
 .contact-form {
@@ -883,53 +782,23 @@ section a:hover {
     background-color: #218838; /* Darker green on hover */
 }
 
-.social-media {
-    margin-top: 20px; /* Space above the social media links */
-    text-align: center; /* Center align social media icons */
+
+#sendMessageButton {
+    padding: 10px;          /* Padding for the button */
+    background-color: #28a745; /* Green background for the button */
+    color: white;           /* White text color */
+    border: none;           /* No border */
+    border-radius: 4px;    /* Rounded corners */
+    cursor: not-allowed;    /* Not-allowed cursor */
+    font-size: 16px;        /* Consistent font size for button */
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
-.social-media h3 {
-    margin-bottom: 10px; /* Space below the heading */
+#sendMessageButton:disabled {
+    background-color: #ccc; /* Grey background for disabled state */
+    color: #666;            /* Darker text color */
 }
 
-.social-media ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: center; /* Center the icons horizontally */
-    gap: 20px; /* Space between the icons */
-}
-
-.social-media li {
-    display: inline-block;
-}
-
-.social-media a {
-    text-decoration: none; /* Remove underline from links */
-    color: #0277f5; /* Blue color for icons */
-    font-size: 30px; /* Increase icon size */
-    transition: color 0.3s; /* Smooth transition for color */
-}
-
-.social-media a:hover {
-    color: #033f80; /* Darker blue on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    #contact {
-        padding: 15px; /* Less padding on smaller screens */
-        max-width: 100%; /* Full width on smaller screens */
-    }
-
-    .contact-form button {
-        font-size: 14px; /* Smaller button text on mobile */
-    }
-
-    .social-media a {
-        font-size: 24px; /* Smaller icons on mobile */
-    }
-}
 
 
 
@@ -939,8 +808,6 @@ section a:hover {
     header {
         padding: 15px;
     }
-
-
 
     /* Profile Image */
     .profile-image {
@@ -985,4 +852,168 @@ section a:hover {
     p {
         font-size: 0.9rem; /* Further decrease paragraph size */
     }
+}
+
+
+
+
+    /* Basic page and profile styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 20px;
+        position: relative;
+    }
+
+    /* Dropdown container */
+.dropdown {
+    position: fixed;                    /* Fixes the dropdown in the viewport */
+    top: 20px;                          /* Position from the top of the viewport */
+    right: 20px;                        /* Position from the right of the viewport */
+    background-color: black;            /* Black background for the dropdown */
+    padding: 8px 12px;                  /* Adds space inside the box for better appearance */
+    border-radius: 8px;                 /* Rounded corners for a smoother look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth and elevation */
+    z-index: 1000;                      /* Ensures dropdown is on top of other elements */
+    transition: transform 0.3s ease;    /* Transition for smooth scaling */
+}
+
+/* Scale effect on hover */
+.dropdown:hover {
+    transform: scale(1.1);              /* Slightly enlarge the dropdown on hover */
+}
+
+
+    /* Three dots button */
+    .dropdown button {
+        font-size: 48px;            /* Makes the dots larger */
+        background: none;
+        border: none;
+	border-radius: 8px; 
+        color: white;               /* White dots on black background */
+        cursor: pointer;
+        padding: 0;                 /* Removes padding around the button */
+        transition: transform 0.3s ease;
+    }
+
+    /* Hover effect for the button */
+    .dropdown button:hover {
+        transform: scale(1.1);      /* Slightly enlarge on hover */
+    }
+
+    /* Dropdown content styles */
+    .dropdown-content {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #990303; /* Background color for dropdown */
+        min-width: 160px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px; /* Rounded corners */
+        animation: fadeIn 0.3s; /* Animation for dropdown */
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-5px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dropdown-content button {
+        width: 100%; /* Full-width buttons in dropdown */
+        text-align: left;
+        font-size: 18px; /* Inside content text size */
+        background: none;
+        border: none;
+	border-radius: 8px; 
+        padding: 10px 15px;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Transition for hover effect */
+    }
+
+    .dropdown-content button:hover {
+        background-color: #292828; /* Darker color on hover */
+    }
+
+    .show {
+        display: block; /* Show dropdown when toggled */
+    }
+
+    /* Section styles */
+    .section, #profile {
+        display: none; /* Hide sections and profile initially */
+    }
+
+    /* Initial profile section shown */
+    #profile {
+        display: block; /* Show profile by default */
+        color: white;
+    }
+
+
+
+
+.social-media {
+    text-align: center; /* Center the social media section */
+    margin: 10px 0; /* Space around the section */
+}
+
+.social-media h3 {
+    color: white; /* Heading color */
+    margin-bottom: 15px; /* Space below the heading */
+    font-size: 24px; /* Font size for the heading */
+}
+
+.social-media ul {
+    list-style-type: none; /* Remove bullets from list */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center align the items */
+}
+
+.social-media li {
+    margin: 0 10px; /* Space between icons */
+}
+
+.social-media a {
+    display: inline-block; /* Allows for setting width and height */
+    width: 50px; /* Set width for square box */
+    height: 45px; /* Set height for square box */
+    background-color: white; /* White background for icons */
+    border-radius: 8px; /* Slightly rounded corners */
+    text-align: center; /* Center the icon inside the box */
+    line-height: 50px; /* Vertically center the icon */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for effects */
+}
+
+.social-media a:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.social-media i {
+    font-size: 24px; /* Size of the icons */
+}
+
+/* Specific colors for each icon */
+.social-media a.youtube i {
+    color: red; /* YouTube color */
+}
+
+.social-media a.instagram i {
+    color: #E1306C; /* Instagram color */
+}
+
+.social-media a.facebook i {
+    color: #1877F2; /* Facebook color */
+}
+
+.social-media a.linkedin i {
+    color: #0077B5; /* LinkedIn color */
+}
+
+.social-media a.github i {
+    color: black; /* GitHub color */
 }
