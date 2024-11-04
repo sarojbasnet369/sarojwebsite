@@ -9,60 +9,89 @@
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3065940060226378"
      crossorigin="anonymous"></script>
 
-<style>
-        .section {
-            display: none;
-        }
-        .active {
-            display: block;
-        }
-    </style>
+
 </head>
 
 
 <body>
-    <header> 
-
-	<h1>SAROJ BASNET</h1>
-	<img src="Photos/Profile.png" alt="Saroj Basnet" class="profile-image">
-        <p class="glitter-effect">Mechanical Engineering Student | YouTuber </p>
-
-    </header>
-
-
-<div class="menu">
-        <button onclick="showSection('aboutMe')">About Me</button>
-        <button onclick="showSection('youtube')">YouTube Videos</button>
+   
+<div class="dropdown">
+    <button onclick="toggleDropdown()">&#x22EE;</button> <!-- Three dots -->
+    <div class="dropdown-content" id="myDropdown">
+        <button onclick="showProfile()">Home</button>
+        <button onclick="showSection('youtube')">YouTube</button>
         <button onclick="showSection('skills')">Skills</button>
         <button onclick="showSection('portfolio')">Portfolio</button>
         <button onclick="showSection('achievements')">Achievements</button>
         <button onclick="showSection('blog')">Blog</button>
         <button onclick="showSection('resume')">Resume</button>
         <button onclick="showSection('contact')">Contact</button>
-    </div> 
+    </div>
+</div>
+
   
 
 
+ <div id="profile">
+ 
+	<div class="header-container">
+        <img src="Photos/Profile.png" alt="Saroj Basnet" class="profile-image">
+        
+           <div class="header-text">
+    		<h1>SAROJ BASNET</h1>
+   		 <p class="glitter-effect">Mechanical Engineering Student | YouTuber</p>
+    		<p class="about-text">
+     	 	 <p>Hello, I'm Saroj Basnet, a final-year (8th semester) Mechanical Engineering student at IOE Pulchowk Campus. </p>
+
+		<p>My academic journey has fueled my passion for 3D mechanical design, automation, and coding. I am deeply interested in 3D design and have worked on various hands-on projects, including the fabrication of a plastic injection molding machine. 
+		</p>
+
+		<p>Additionally, I run a YouTube channel where I create educational content to support students preparing for engineering entrance exams in Nepal. 
+		</p>
+
+		<p>As I approach graduation, I’m exploring opportunities for further studies abroad or stepping into a professional career. This website is a showcase of my projects, technical skills, and academic accomplishments.
+		</p>
+	 </div>
+
+    </div>
+
+<div class="social-media">
+    <h3>Connect with Me</h3>
+    <ul>
+        <li>
+            <a href="https://www.instagram.com/sarojbasnet369" target="_blank" class="instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/sarojbasnet369" target="_blank" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/sarojbasnet369" target="_blank" class="linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/sarojbasnet369" target="_blank" class="github">
+                <i class="fab fa-github"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://youtube.com/sarojbasnet369" target="_blank" class="youtube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
 
 
-<section id="aboutMe" class="section active">
-    <h2>ABOUT ME</h2>
-   
-    <p>Hello, I'm Saroj Basnet, a final-year(8th semester) Mechanical Engineering student at IOE Pulchowk Campus. My academic journey has fueled my passion for  3D mechanical design, automation, and coding. </p> 
-
-    <p>Beyond my academic work, I am deeply interested in 3D design and have worked on various hands-on projects, including the Fabrication of a Plastic Injection Molding Machine. Additionally, I run a YouTube channel where I create educational content to support students preparing for engineering entrance exams in Nepal.</p>
-
-    <p>As I approach graduation, I’m exploring opportunities for further studies abroad or stepping into a professional career. This website is a showcase of my projects, technical skills, and academic accomplishments.</p>
-
-</section>
-
-
-
-   
 
 
  <section id="youtube" class="section">
-    <h2>YouTube</h2>
+    <h2>YOUTUBE</h2>
     <p>Welcome to my YouTube channel! Here, you’ll find a variety of videos designed to help you prepare for engineering entrance exams, share valuable tips, and enjoy some light-hearted comedy. Check out my latest content below and don’t forget to subscribe for more updates!</p>
    
     <p>Check out my YouTube channel for more videos: 
@@ -131,15 +160,15 @@
     <h2>SKILLS</h2>
     
     <ul>
-       <li><strong>CAD Design:</strong> Proficient in SolidWorks, AutoCAD, and Blender, with a focus on mechanical component and system design.</li>
-        <li><strong>CFD & Simulation:</strong> Actively enhancing skills in ANSYS for computational fluid dynamics (CFD) applications.</li>
-        <li><strong>Programming:</strong> Familiar with HTML, C programming, and MATLAB, applied in simulation and optimization tasks.</li>
-        <li><strong>Prototyping & Fabrication:</strong> Experienced in designing and fabricating prototypes, including plastic injection molding machines.</li>
-        <li><strong>Fluid Simulation:</strong> Developing expertise in fluid simulation through hands-on projects.</li>
-        <li><strong>Video Editing:</strong> Basic proficiency in Adobe Premiere Pro, focusing on the production of educational content for YouTube.</li>
-        <li><strong>Image Editing:</strong> Competent in GIMP for graphic design and image editing, utilized for creating thumbnails, memes, and various graphics.</li>
-        <li><strong>Data Analysis & Documentation:</strong> Knowledgeable in Microsoft Excel for data analysis, chart creation, and reporting, alongside proficiency in LaTeX for composing technical reports and papers.</li>
-    </ul>
+       <li><strong>CAD Design:</strong> Currently learning SolidWorks, AutoCAD, and Blender, with an interest in mechanical component and system design.</li>
+        <li><strong>CFD & Simulation:</strong> Beginner in ANSYS, exploring computational fluid dynamics (CFD) applications.</li>
+        <li><strong>Programming:</strong> Basic knowledge of HTML, C programming, and MATLAB, with applications in simulation and optimization tasks.</li>
+        <li><strong>Prototyping & Fabrication:</strong> Gaining experience in designing and fabricating prototypes, including working with plastic injection molding machines.</li>
+        <li><strong>Fluid Simulation:</strong> Developing foundational skills in fluid simulation through hands-on projects.</li>
+        <li><strong>Video Editing:</strong> Basic proficiency in Adobe Premiere Pro, focusing on creating educational content for YouTube.</li>
+        <li><strong>Image Editing:</strong> Learning GIMP for graphic design and image editing, used for creating thumbnails, memes, and various graphics.</li>
+        <li><strong>Data Analysis & Documentation:</strong> Familiar with Microsoft Excel for data analysis and reporting, and starting to use LaTeX for composing technical reports and papers.</li>
+   </ul>
 </section>
 
 
@@ -152,9 +181,10 @@
 
     <ul>
         <li>
-            <h3>Fabrication of Modified Distillation Apparatus by CFD Analysis of Traditional Nepali Alcohol, Raksi</h3>
-            <p>This project focuses on optimizing the distillation process using computational fluid dynamics (CFD) to modernize the production of traditional Nepali alcohol, 'Raksi'. We are designing the apparatus, conducting simulations to improve efficiency, and integrating modern engineering principles while preserving traditional methods.</p>
-        <!--    <img src="Photos/Raksidist.jpg" alt="Traditional Distillation Apparatus Design" style="width: 300px; height: auto;" />
+            <h3>Fabrication of Modified Distillation Apparatus through CFD Analysis of Traditional Nepali Alcohol, Raksi</h3>
+<p>This ongoing project focuses on enhancing the distillation process for traditional Nepali alcohol, 'Raksi,' using computational fluid dynamics (CFD). As a team, we are actively involved in designing the distillation apparatus and conducting simulations to identify improvements in efficiency. This work aims to integrate modern engineering principles while respecting and preserving traditional production methods.</p>
+
+<!--    <img src="Photos/Raksidist.jpg" alt="Traditional Distillation Apparatus Design" style="width: 300px; height: auto;" />
 
             <ul>
                 <li>Utilized computational fluid dynamics (CFD) for process optimization.</li>
@@ -201,12 +231,11 @@
   
 
 <section id="achievements" class="section">
-    <h2>Achievements & Certifications</h2>
+    <h2>ACHIEVEMENTS & CERTIFICATIONS</h2>
     <ul>
         <li>Secured 3rd rank in the IOE BE/BArch Entrance Exam - 2077</li>
         <li>Won the Best Engineering Award for the Plastic Injection Molding Machine at MechTrix - 2079</li>
 	<li>Developed a YouTube community of over 9,700 subscribers by delivering consistently engaging content.</li>
-
 
     </ul>
 	<p>Real success lies in creating something that benefits people, society, humanity, and nature, allowing me to contribute meaningfully to their lives and be of service to others. I am still on that journey.</p>
@@ -238,7 +267,7 @@
     <div class="blog-entry">
         <h3>The use of AI for web designing </h3>
         <p><em>Published on October 16, 2024</em></p>
-        <p>I designed this website using ChatGPT and Notepad. It is hosted for free in Github(Github can host static website) and the domain ".com.np" is also free. </p>
+        <p>I designed this website using ChatGPT and Notepad. It’s hosted for free on GitHub (which supports static websites), and the ".com.np" domain was also freely available.</p>
 	<p>In today's digital world, artificial intelligence (AI) is changing how we design websites. Tools like ChatGPT help designers and developers make attractive and user-friendly websites more easily.</p>
     	<p>One big advantage of using AI in web design is that it can quickly come up with design ideas. By looking at existing designs and what users like, AI can suggest options that fit current trends and best practices.</p>
     	<p>For my personal website, I used ChatGPT to help with the design. It helped me think of content ideas, improve the layout, and make the overall user experience better. The final result is a clean and organized website that effectively showcases my skills and projects.</p>
@@ -289,50 +318,26 @@
 
 
 
-
 <!-- <section id="research" class="section">
     <h2>Research</h2>
 </section>
 -->
 
 
+
+
 <section id="contact" class="section">
     <h2>CONTACT</h2>
-   <!-- <form class="contact-form" action="send_email.php" method="POST">
+   <form class="contact-form" action="send_email.php" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit" id="sendMessageButton" disabled>Send Message</button>
+
     </form>
--->
-	
-    <div class="social-media">
-        <h3>Connect with Me</h3>
-        <ul>
-            <li>
-                <a href="https://www.instagram.com/sarojbasnet369" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/sarojbasnet369" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/sarojbasnet369" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/sarojbasnet369" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-	   
-        </ul>
+
 	<p><strong>Email:</strong> <a href="https://gmail.com">sarojbasnetp@gmail.com</a></p>
-    </div>
+
 </section>
 
 
@@ -364,24 +369,52 @@
     </script>
 
 
+ 
+
 <script>
-        // JavaScript to show the selected section and hide others
-        function showSection(sectionId) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
+    // Function to toggle dropdown menu visibility
+    function toggleDropdown() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
 
-            // Show the selected section
-            document.getElementById(sectionId).style.display = 'block';
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown button')) {
+            const dropdowns = document.getElementsByClassName("dropdown-content");
+            for (let i = 0; i < dropdowns.length; i++) {
+                const openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
         }
+    }
 
-        // Show 'About Me' by default on page load
-        window.onload = function() {
-            showSection('aboutMe');
-        };
-    </script>
+    // Function to show only the profile (home)
+    function showProfile() {
+        // Hide all sections and show only the profile
+        const sections = document.getElementsByClassName('section');
+        for (let section of sections) {
+            section.style.display = 'none';
+        }
+        document.getElementById('profile').style.display = 'block';
+        toggleDropdown(); // Close dropdown
+    }
+
+    // Function to show a specific section and hide the profile
+    function showSection(sectionId) {
+        // Hide all sections and the profile
+        const sections = document.getElementsByClassName('section');
+        for (let section of sections) {
+            section.style.display = 'none';
+        }
+        document.getElementById('profile').style.display = 'none';
+
+        // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
+        toggleDropdown(); // Close dropdown
+    }
+</script>
 
 
 </body>
