@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Base font size for paragraphs */
 }
 
 
@@ -33,7 +34,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 100px 20px;
 }
@@ -57,7 +58,7 @@ body {
 }
 
 .glitter-effect {
-    font-size: 25px; /* Existing font size */
+    font-size: 24px; /* Existing font size */
     font-weight: bold; /* Existing font weight */
     font-style: italic; /* Makes the text italic */
     animation: popUp 2s ease-in-out; /* Existing animation */
@@ -83,11 +84,11 @@ body {
     }
 
     .header-text h1 {
-        font-size: 40px;
+        font-size: 28px;
     }
 
     .header-text p {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
@@ -111,7 +112,7 @@ footer {
 /* Section Styling */
 section {
     padding: 60px 20px;
-    max-width: 1200px;
+    max-width: 1080px;
     margin: auto;
     background-color: white;
     margin-bottom: 40px;
@@ -241,9 +242,7 @@ section a:hover {
 }
 
 .scroll-btn:hover {
-    
     transform: scale(1.1);
-
 }
 
 
@@ -273,7 +272,7 @@ section a:hover {
     color: #555; /* Slightly lighter color for body text */
     margin-bottom: 20px; /* Space below paragraphs */
     line-height: 1.5; /* Improve readability */
-text-align: left; /* Align the text to the left */
+    text-align: left; /* Align the text to the left */
 }
 
 .youtube-link {
@@ -286,7 +285,7 @@ text-align: left; /* Align the text to the left */
 
 /* Category Styles */
 .category-title {
-    font-size: 1.5em; /* Slightly larger font for category titles */
+    font-size: 24px; /* Slightly larger font for category titles */
     color: #444; /* Color for category titles */
     margin: 20px 0 10px; /* Space around category titles */
     border-bottom: 2px solid #ccc; /* Underline for separation */
@@ -336,7 +335,7 @@ text-align: left; /* Align the text to the left */
     background-color: #e3f2fd; /* Soft light blue background */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 900px; /* Limit the width for better readability */
+    max-width: 1080px; /* Limit the width for better readability */
     margin: 30px auto; /* Center the section */
     font-family: 'Open Sans', sans-serif; /* Clean font for readability */
 }
@@ -375,10 +374,13 @@ text-align: left; /* Align the text to the left */
     padding: 10px 20px; /* Padding for button effect */
     background-color: #4CAF50; /* Green background for link */
     color: white; /* White text color */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 9px; /* Rounded corners */
     text-decoration: none; /* No underline */
-    font-size: 18px; /* Font size for the link */
+    font-size: 16px; /* Font size for the link */
     transition: background-color 0.3s; /* Transition for background color */
+    width: 80%; /* Button will take 80% of the container's width */
+    max-width: 300px; /* Prevents it from becoming too wide on large screens */
+    margin: 0 auto; /* Centers the button if it has a fixed width */
 }
 
 .resume-link:hover {
@@ -392,15 +394,15 @@ text-align: left; /* Align the text to the left */
     }
 
     .education-entry {
-        padding: 15px; /* Smaller padding on mobile */
+        padding: 14px; /* Smaller padding on mobile */
     }
 
     .education-entry h3 {
-        font-size: 22px; /* Smaller education title on mobile */
+        font-size: 18px; /* Smaller education title on mobile */
     }
 
     .resume-link {
-        font-size: 16px; /* Smaller link text on mobile */
+        font-size: 12px; /* Smaller link text on mobile */
     }
 }
 
@@ -414,7 +416,7 @@ text-align: left; /* Align the text to the left */
   padding: 50px 30px;
   border-radius: 12px;
   margin: 30px auto;
-  max-width: 900px;
+  max-width: 1080px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Larger shadow for depth */
   transition: transform 0.3s ease-in-out;
 }
@@ -453,7 +455,7 @@ text-align: left; /* Align the text to the left */
 }
 
 #skills ul li {
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.8;
   color: #34495e; /* Elegant dark gray text */
   margin-bottom: 20px;
@@ -476,7 +478,7 @@ text-align: left; /* Align the text to the left */
 #skills ul li::before {
  
   color: #4CAF50; /* Green color */
-  font-size: 22px;
+  font-size: 20px;
   position: absolute;
   left: 0;
   top: 15px;
@@ -499,7 +501,7 @@ text-align: left; /* Align the text to the left */
   }
 
   #skills ul li {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 
@@ -510,7 +512,7 @@ text-align: left; /* Align the text to the left */
     background-color: #f0f4f8; /* Soft light background color */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 900px; /* Limit the width for better readability */
+    max-width: 1080px; /* Limit the width for better readability */
     margin: 30px auto; /* Center the section */
     font-family: 'Open Sans', sans-serif; /* Clean font for readability */
 }
@@ -524,7 +526,7 @@ text-align: left; /* Align the text to the left */
 }
 
 #portfolio p {
-    font-size: 18px; /* Standard font size */
+    font-size: 16px; /* Standard font size */
     color: #555; /* Darker text color for readability */
     text-align: left; /* Center-aligning introductory text */
     margin-bottom: 30px; /* Space below paragraph */
@@ -533,6 +535,7 @@ text-align: left; /* Align the text to the left */
 #portfolio ul {
     list-style-type: none; /* Remove bullet points */
     padding-left: 0; /* Remove default padding */
+    font-size: 16px;
 }
 
 #portfolio li {
@@ -542,6 +545,7 @@ text-align: left; /* Align the text to the left */
     margin-bottom: 20px; /* Space between list items */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+    font-size: 16px;
 }
 
 #portfolio li:hover {
@@ -582,19 +586,18 @@ text-align: left; /* Align the text to the left */
 /* Responsive Design */
 @media (max-width: 768px) {
     #portfolio h2 {
-        font-size: 30px; /* Smaller heading on mobile */
+        font-size: 28px; /* Smaller heading on mobile */
     }
 
     #portfolio p {
-        font-size: 16px; /* Smaller paragraph text on mobile */
+        font-size: 12px; /* Smaller paragraph text on mobile */
     }
 
     #portfolio li {
-        padding: 15px; /* Smaller padding on mobile */
+        padding: 12px; /* Smaller padding on mobile */
     }
-
     #portfolio h3 {
-        font-size: 22px; /* Smaller project title on mobile */
+        font-size: 16px; /* Smaller project title on mobile */
     }
 }
 
@@ -605,7 +608,7 @@ text-align: left; /* Align the text to the left */
     background-color: #e8f5e9; /* Soft light green background */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 900px; /* Limit the width for better readability */
+    max-width: 1080px; /* Limit the width for better readability */
     margin: 30px auto; /* Center the section */
     font-family: 'Open Sans', sans-serif; /* Clean font for readability */
 }
@@ -640,7 +643,7 @@ text-align: left; /* Align the text to the left */
     content: "✔️"; /* Checkmark before each achievement */
     margin-right: 10px; /* Space between icon and text */
     color: #4CAF50; /* Green color for the icon */
-    font-size: 20px; /* Size of the icon */
+    font-size: 16px; /* Size of the icon */
 }
 
 /* Responsive Design */
@@ -674,7 +677,7 @@ text-align: left; /* Align the text to the left */
 }
 
 #blog p {
-    font-size: 18px; /* Standard font size */
+    font-size: 16px; /* Standard font size */
     color: #0a0a0a; /* Darker text color for readability */
     text-align: left; /* Center-align introductory text */
     margin-bottom: 30px; /* Space below introductory paragraph */
@@ -724,15 +727,15 @@ text-align: left; /* Align the text to the left */
     }
 
     #blog p {
-        font-size: 16px; /* Smaller paragraph text on mobile */
+        font-size: 12px; /* Smaller paragraph text on mobile */
     }
 
     .blog-entry {
-        padding: 15px; /* Smaller padding on mobile */
+        padding: 12px; /* Smaller padding on mobile */
     }
 
     .blog-entry h3 {
-        font-size: 22px; /* Smaller blog title on mobile */
+        font-size: 16px; /* Smaller blog title on mobile */
     }
 }
 
@@ -740,7 +743,7 @@ text-align: left; /* Align the text to the left */
     background-color: #f9f9f9; /* Light background for the contact section */
     padding: 20px; /* Add some padding */
     border-radius: 10px; /* Rounded corners */
-    max-width: 900px; /* Limit the width of the form */
+    max-width: 1080px; /* Limit the width of the form */
     margin: auto; /* Center the form */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
    text-align: center; /* Center the text */
@@ -822,11 +825,11 @@ text-align: left; /* Align the text to the left */
 
     /* Text Size Adjustments */
     h2 {
-        font-size: 1.5rem; /* Decrease header size */
+        font-size: 28px; /* Decrease header size */
     }
 
     p {
-        font-size: 1rem; /* Decrease paragraph size */
+        font-size: 12px; /* Decrease paragraph size */
     }
 
     /* Adjust the YouTube iframe */
@@ -846,11 +849,11 @@ text-align: left; /* Align the text to the left */
 @media (max-width: 700px) {
     /* Additional adjustments for very small screens */
     h2 {
-        font-size: 1.2rem; /* Further decrease header size */
+        font-size: 28px; /* Further decrease header size */
     }
 
     p {
-        font-size: 0.9rem; /* Further decrease paragraph size */
+        font-size: 12px; /* Further decrease paragraph size */
     }
 }
 
