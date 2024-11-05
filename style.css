@@ -88,7 +88,7 @@ body {
     }
 
     .header-text p {
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 
@@ -130,7 +130,7 @@ h2 {
 
 /* Text and List Styling */
 p, li {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.7;
     margin-bottom: 20px;
 }
@@ -173,7 +173,7 @@ iframe {
 .contact-form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 720px;
     margin: auto;
 }
 
@@ -290,7 +290,7 @@ section a:hover {
     margin: 20px 0 10px; /* Space around category titles */
     border-bottom: 2px solid #ccc; /* Underline for separation */
     padding-bottom: 5px; /* Padding below category titles */
-text-align: left; /* Align the text to the left */
+    text-align: left; /* Align the text to the left */
 }
 
 /* Video Container Styles */
@@ -394,15 +394,15 @@ text-align: left; /* Align the text to the left */
     }
 
     .education-entry {
-        padding: 14px; /* Smaller padding on mobile */
+        padding: 16px; /* Smaller padding on mobile */
     }
 
     .education-entry h3 {
-        font-size: 18px; /* Smaller education title on mobile */
+        font-size: 16px; /* Smaller education title on mobile */
     }
 
     .resume-link {
-        font-size: 12px; /* Smaller link text on mobile */
+        font-size: 16px; /* Smaller link text on mobile */
     }
 }
 
@@ -590,14 +590,14 @@ text-align: left; /* Align the text to the left */
     }
 
     #portfolio p {
-        font-size: 12px; /* Smaller paragraph text on mobile */
+        font-size: 16px; /* Smaller paragraph text on mobile */
     }
 
     #portfolio li {
-        padding: 12px; /* Smaller padding on mobile */
+        padding: 16px; /* Smaller padding on mobile */
     }
     #portfolio h3 {
-        font-size: 16px; /* Smaller project title on mobile */
+        font-size: 20px; /* Smaller project title on mobile */
     }
 }
 
@@ -727,15 +727,15 @@ text-align: left; /* Align the text to the left */
     }
 
     #blog p {
-        font-size: 12px; /* Smaller paragraph text on mobile */
+        font-size: 16px; /* Smaller paragraph text on mobile */
     }
 
     .blog-entry {
-        padding: 12px; /* Smaller padding on mobile */
+        padding: 16px; /* Smaller padding on mobile */
     }
 
     .blog-entry h3 {
-        font-size: 16px; /* Smaller blog title on mobile */
+        font-size: 20px; /* Smaller blog title on mobile */
     }
 }
 
@@ -779,11 +779,27 @@ text-align: left; /* Align the text to the left */
     cursor: pointer; /* Pointer cursor on hover */
     font-size: 16px; /* Consistent font size for button */
     transition: background-color 0.3s; /* Smooth transition for background color */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+
 }
 
 .contact-form button:hover {
     background-color: #218838; /* Darker green on hover */
 }
+/* Responsive styling for mobile devices */
+@media (max-width: 768px) {
+    #contact {
+        padding: 15px; /* Adjust padding slightly for smaller screens */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%; /* Keep inputs full-width on mobile */
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+    }
+}
+
 
 
 #sendMessageButton {
@@ -829,7 +845,7 @@ text-align: left; /* Align the text to the left */
     }
 
     p {
-        font-size: 12px; /* Decrease paragraph size */
+        font-size: 16px; /* Decrease paragraph size */
     }
 
     /* Adjust the YouTube iframe */
@@ -853,7 +869,7 @@ text-align: left; /* Align the text to the left */
     }
 
     p {
-        font-size: 12px; /* Further decrease paragraph size */
+        font-size: 16px; /* Further decrease paragraph size */
     }
 }
 
