@@ -58,9 +58,7 @@ body {
 }
 
 .glitter-effect {
-    font-size: 24px; /* Existing font size */
     font-weight: bold; /* Existing font weight */
-    font-style: italic; /* Makes the text italic */
     animation: popUp 2s ease-in-out; /* Existing animation */
 }
 
