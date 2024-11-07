@@ -70,26 +70,34 @@ body {
     100% { transform: scale(1); opacity: 1; }
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for screens 768px or smaller */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .profile-image {
-        margin: 0 auto 20px;
+        display: flex;
+        flex-direction: column; /* Stacks the elements vertically */
+        text-align: center; /* Centers the text */
+        padding: 50px 20px; /* Adjusted padding for mobile */
     }
 
     .header-text h1 {
-        font-size: 28px;
+        font-size: 48px; /* Adjusted font size for mobile */
+        text-align: center; /* Centers the h1 text */
     }
 
-    .header-text p {
-        font-size: 16px;
+    .profile-image {
+        margin: 0 auto 20px; /* Centers the image and adds bottom margin */
+        width: 150px; /* Adjusted profile image size for mobile */
+    }
+
+    .about-text {
+        font-size: 16px; /* Smaller font size for mobile */
+        margin-top: 10px; /* Adds space above the about-text */
+    }
+
+    .about-text p {
+        margin-bottom: 10px; /* Adds space between the paragraphs */
     }
 }
-
 
 /* Footer Styling */
 footer {
