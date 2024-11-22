@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online IOE preparationinstitutes</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+	background: linear-gradient(to bottom,  #151fb0, #12b1e6);
+    color: #333;
+    line-height: 1.7;
+    padding: 20px 0;
+}
+
+/* Main container */
+.contain {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    font-size: 2.2em;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.1em;
+    color: #020511;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Published Date */
+.published {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* Back Link Styling */
+.back-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 35px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .back-link {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+
+    .back-link {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .back-link {
+        font-size: 0.9em;
+        padding: 7px 12px;
+    }
+}
+
+/* Author Section Styling */
+.author {
+    font-size: 1.1em;
+    color: #1F0303;
+    font-style: italic;
+    margin-top: 20px;
+    display: block;
+}
+
+/* Enhanced Spacing */
+h1, h3, p {
+    margin-bottom: 25px;
+}
+
+/* Smooth Shadow Effect on Content */
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(45deg, #f8f8f8, #e4e4e4);
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Image container */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Image styling */
+.image {
+    
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Adds space below the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+
+}
+/* Hover effect */
+.image:hover {
+    transform: scale(1.05); /* Slightly scale up the image on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Mobile-friendly styling using media queries */
+@media (max-width: 768px) {
+    .image {
+        max-width: 300px; /* Allow the image to use the full width of the container */
+        height: auto; /* Ensure the height adjusts accordingly */
+    }
+}
+
+@media (max-width: 480px) {
+    .image {
+        max-width: 200px; /* Full width on very small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Caption styling */
+.caption {
+    font-size: 1.2em;
+    color: #333;
+    font-style: italic;
+    margin-top: 10px; /* Add space below the image */
+    text-align: center;
+    padding: 5px;
+}
+
+/* Improved Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Scroll to Top Button Styling */
+#scrollToTop {
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixed position to stay in place */
+    bottom: 20px; /* Positioned 20px from the bottom */
+    right: 20px; /* Positioned 20px from the right */
+    background-color: #007bff; /* Primary color background */
+    color: white; /* White arrow icon */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular button */
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    font-size: 24px; /* Larger font size for better visibility */
+    display: flex; /* Flexbox to center the icon */
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+    cursor: pointer; /* Pointer cursor to indicate it's clickable */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effect */
+}
+
+/* Hover and Focus states */
+#scrollToTop:hover,
+#scrollToTop:focus {
+    background-color: #0056b3; /* Darker blue for hover effect */
+    transform: scale(1.1); /* Slightly enlarge the button on hover/focus */
+}
+
+/* Accessibility: Focus outline */
+#scrollToTop:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus outline for better accessibility */
+}
+
+/* For smaller devices (mobile and tablets) */
+@media (max-width: 768px) {
+    #scrollToTop {
+        width: 45px; /* Slightly smaller button */
+        height: 45px; /* Same height as width */
+        font-size: 20px; /* Smaller font size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #scrollToTop {
+        width: 40px; /* Even smaller button on very small screens */
+        height: 40px; /* Keep it square */
+        font-size: 18px; /* Further reduce the font size */
+    }
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+  <div class="contain">
+        <h3> <strong>Online Engineering entrance preparation sites/institutes in Nepal </strong></h3>
+        <p class="published"><em>Published on October 16, 2024</em></p>
+ 	<p class="author"><strong>Author: Saroj Basnet (Rank 3, IOE BE/BArch Entrance 2077)</strong></p>
+        
+
+    <p>It takes at least three months to receive the results of the grade XII annual exam. During this period, students can utilize their time for various purposes, such as engaging in creative activities, learning new skills, pursuing hobbies, or preparing for the entrance exams of various educational programs. Different colleges and universities conduct entrance exams before admitting students to their Bachelor's programs. </p>
+<div class="image-container">
+    <img src="Photos/b1.jpg" alt="Tribhuvan University" class="image" style="width: 800px; height: auto;">
+    <p class="caption">Pic: Tribhuvan University</p>
+</div>
+
+    <p> Tribhuwan University, Kathmandu University, Pokhara University, and Purbanchal University are some of the renowned universities in Nepal offering various engineering courses. The Institute of Engineering (TU) has been the top choice for many students for years. There is fierce competition to get into a good engineering campus or college, in the field of one’s choice, in Nepal. Every year, thousands of students take the engineering entrance exam, but not all succeed. In 2081, more than 9,300 students participated in the IOE BE/BArch Entrance Examination, but only 6,530 passed. For many students, online engineering entrance preparation is an excellent way to improve their chances of getting into their dream college.</p>
+    <h2>Benefits of Online Engineering Entrance Preparation</h2>
+    <ul>
+        <li><strong>Flexibility:</strong> Access courses from anywhere, anytime, allowing you to study at your own pace and on your schedule.</li>
+        <li><strong>Affordability:</strong> Online courses are far more affordable than traditional classroom (physical) courses.</li>
+        <li><strong>Convenience:</strong> Study from the comfort of your home, saving time and money on transportation and accommodation.</li>
+        <li><strong>Personalized Attention:</strong> Many online courses offer live chat or video conferencing with instructors and mentors for personalized help.</li>
+        <li><strong>Access to Resources:</strong> Practice questions, study guides, mock tests, video tutorials, and recorded lectures are commonly available.</li>
+        <li><strong>Community:</strong> Online forums and discussion boards (Facebook, Discord, Telegram groups, etc.) to connect with fellow students and share ideas.</li>
+    </ul>
+<p> </p>
+    <h2> <strong>Best Online Engineering Entrance Preparation Institutes in Nepal are listed below:</strong></h2>
+
+
+
+    <h2>1. Clamphook Academy</h2>
+    <p>Clamphook Academy is an online and physical engineering entrance preparation institute founded in 2019 by Er. Bikki Chhantyal, an alumnus of IOE Pulchowk Campus. It offers a variety of online courses for students preparing for engineering entrance exams in Nepal, including the IOE entrance exam, PSC, and CSIT entrance exams.</p>
+    <p>The courses are taught by experienced and qualified instructors who are experts in engineering entrance preparation. The academy provides a variety of resources to help students succeed, including practice questions, weekly online mock tests, study guides, and video tutorials.</p>
+<div class="image-container">
+    <img src="Photos/b2.jpg" alt="Tribhuvan University" class="image" style="width: 600px; height: auto;">
+    <p class="caption">Pic: Students taking weekly computer-based test.</p>    
+<p>Clamphook Academy has gained significant success in a short time, thanks to positive word-of-mouth and features like computer-based weekly mock tests and a collection of memory-based IOE past questions. Its website hosts more than 50,000 questions for practice. The teaching team consists of young, energetic, and talented past toppers, as well as teachers with decades of experience from IOE Pulchowk and other colleges.</p>
+    <p>The fee for online classes is Rs. 10,000.</p>
+	<p> If you are interested in learning more about Clamphook Academy, you can visit their website or contact them through their social media channels. </p>
+    <p>Website: <a href="http://www.clamphook.com" target="_blank">www.clamphook.com</a></p>
+     
+    </div>
+ 
+
+
+
+    <h2>2. PEA Digitals, Engineeringdote</h2>
+     <p>
+        PEA Association Pvt. Ltd. is a leading engineering entrance preparation institute in Nepal. It was founded by Er. Laxman Pokharel, a graduate of Pulchowk Campus, in 1994. PEA Association offers a variety of online and physical courses for students preparing for engineering entrance exams in Nepal, including the IOE entrance exam, PSC, BE tuition classes, and the CSIT entrance exam. It has been helping students prepare for engineering entrance exams in Nepal for over 30 years.
+    </p>
+<div class="image-container">
+    <img src="Photos/b3.jpg" alt="Tribhuvan University" class="image" style="width: 360px; height: auto;">
+    <p class="caption">Pic: PEA building</p>
+    <p>
+        PEA Association's courses are taught by instructors with decades of experience, who are experts in engineering entrance preparation. PEA Association also offers a variety of resources to help students succeed, including practice questions, study guides, and video tutorials. PEA Engineeringdote offers more than 50,000 practice questions, and PEA Digitals provides over 350 hours of recorded lectures.
+    </p>
+    <p>
+        The fee is Rs. 15,000 for online classes and Rs. 7,000 for the PEA Mentors subscription.
+    </p>
+<p> If you are interested in learning more about PEA, you can visit their website or contact them through their social media channels. </p>
+   <p>Website: <a href="http://www.pea.edu.np" target="_blank">www.pea.edu.np</a></p>
+	
+</div>
+
+
+
+    <h2>3. Ambition Guru</h2>
+     <p>
+        Ambition Guru is an AI-driven ed-tech platform that guides learners to be the best at anything they desire. You can prepare for the engineering entrance exam on this platform.
+    </p>
+    <p>
+        Apart from engineering, entrance exams for BSc. CSIT, CEE, Loksewa, SEE Bridge Course and other courses are available too.
+    </p>
+<div class="image-container">
+    <img src="Photos/b4.jpg" alt="Tribhuvan University" class="image" style="width: 360px; height: auto;">
+    <p class="caption">Pic: AG building</p>
+    <p>
+        Students can take an AI-based 'mock test' on it. Students can track their performance and see the report. The entrance exam fee on this platform is Rs 4,500.
+    </p>
+<p> If you are interested in learning more about Ambition Guru, you can visit their website or contact them through their social media channels. 
+You can download its app from Playstore. 
+ </p>
+   <p>Website: <a href="https://ambition.guru/" target="_blank">Ambition Guru</a></p>
+	
+</div>
+
+
+
+    <h2>4. Nepal Institute</h2>
+    <p>Nepal Institute is one of the oldest BE/B. Arch (IOE) entrance preparation institutes in Nepal. They also run classes for CSIT entrance preparation. With a team of teachers having decades of experience, it provides quality education and entrance exam preparation. It is located in Maitighar, Kathmandu, Nepal.</p>
+	<div class="image-container">
+    <img src="Photos/b5.jpg" alt="Tribhuvan University" class="image" style="width: 600px; height: auto;">
+    <p class="caption">Pic: Top ranker students with teachers</p>
+</div>
+
+
+
+    <h2>5. PI Academy</h2>
+    <p>PI Academy stands as a well-known IOE Entrance Preparation Institute in Nepal. This institute's main objective is to provide a solid groundwork for students aiming to secure admission in BE, B.Arch, and B.Sc.CSIT programs across various universities. Situated in Matighar Mandala, Kathmandu, the academy was established by a team of devoted educators and former students from Pulchowk Campus. This group has garnered more than ten years of experience in the realm of entrance exam preparation. Their unwavering dedication revolves around quenching the thirst for knowledge among engineering enthusiasts, all the while making valuable contributions to nurturing skilled future engineers. This endeavor holds immense significance for the advancement and prosperity of the nation.</p>
+	<div class="image-container">
+    <img src="Photos/b6.jpg" alt="Tribhuvan University" class="image" style="width: 600px; height: auto;">
+    <p class="caption">Pic: PI Academy at Maitighar</p>
+</div>
+
+
+
+    <h2>Some Other Institutes</h2>
+    <ul>
+        <li>Beats</li>
+        <li>Apex</li>
+        <li>Super Hundred Entrancepedia</li>
+        <li>Learnsic</li>
+        <li>Aakhyan</li>
+        <li>Uthinkcrazy</li>
+        <li>Hamro Academy</li>
+    </ul>
+<p> </p>
+   
+   <p>Online engineering entrance preparation can be a great way to learn the material you need to know for the exam, and to get practice answering questions in a timed format. It can also be a great way to connect with other students who are preparing for the exam, and to get support and motivation from your peers.</p>
+
+<p>If you are serious about getting into a good engineering college in Nepal, then online engineering entrance preparation is a great option. There are many different courses available, so you can find one that fits your needs and budget. With hard work and dedication, you can use online engineering entrance preparation to increase your chances of success.</p>
+
+<p>If you are considering online engineering entrance preparation, here are some things to keep in mind:</p>
+
+    <ul>
+        <li><strong>Choose a reputable course provider:</strong> Ensure the course has a good track record.</li>
+        <li><strong>Consider your budget:</strong> Choose a course that fits your financial situation.</li>
+        <li><strong>Make sure the course is right for you:</strong> Some courses focus more on material teaching, while others focus on practice questions and mock exams.</li>
+        <li><strong>Be prepared to put in the work:</strong> Online courses are helpful, but you must dedicate time and effort to learning and practicing.</li>
+    </ul>
+<p> </p>
+
+<p>As the landscape of education continues to evolve, embracing online learning can be a strategic move for aspiring engineers. By considering the benefits outlined in this article and researching the options available, students can choose the right preparation path that aligns with their learning style and budget. With dedication, effort, and the right resources, students can navigate the challenges of engineering entrance exams and take significant steps toward achieving their academic and career goals.</p>
+
+<p>If you're ready to embark on this journey, explore the options mentioned and take the first step toward your future in engineering.</p>
+
+ <p><em>(Please note that some of the details mentioned may have changed since it was written.)</em></p>
+
+ 
+        <a href="index.html" class="back-link">Back</a>
+    </div>
+
+
+<!-- Scroll to top button -->
+<button id="scrollToTop" style="display: none; position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 50%; font-size: 18px;">
+     ↑
+</button>
+
+<script>
+    // Get the scroll-to-top button
+    const scrollBtn = document.getElementById('scrollToTop');
+
+    // Show or hide the button based on scroll position
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollBtn.style.display = "block";  // Show the button when scrolled down
+        } else {
+            scrollBtn.style.display = "none";   // Hide the button when at the top
+        }
+    };
+
+    // Scroll smoothly when the button is clicked
+    scrollBtn.addEventListener('click', () => {
+        // Smooth scroll to the top
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+</body>
+</html>
+

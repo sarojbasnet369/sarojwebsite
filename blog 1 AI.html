@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Of AI for web designing</title>
+
+<style>
+/*blog AI */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom,  #151fb0, #12b1e6);
+    color: #333;
+    line-height: 1.6;
+}
+
+.contain {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.1em;
+    color: #000000;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.published {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Back link */
+.back-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1, h3 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .back-link {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+}
+
+/* Mobile-friendly improvements */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1, h3 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .back-link {
+        font-size: 0.9em;
+        padding: 6px 10px;
+    }
+}
+/* Author section styling */
+.author {
+    font-size: 1.1em;
+    color: #1F0303;
+    margin-top: 10px;
+}
+/* Scroll to Top Button Styling */
+#scrollToTop {
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixed position to stay in place */
+    bottom: 20px; /* Positioned 20px from the bottom */
+    right: 20px; /* Positioned 20px from the right */
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Added padding for better button size */
+    font-size: 16px; /* Font size for text */
+    font-weight: bold; /* Bold text for emphasis */
+    text-align: center; /* Centered text */
+    cursor: pointer; /* Pointer cursor to indicate it's clickable */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effect */
+}
+
+/* Hover and Focus states */
+#scrollToTop:hover,
+#scrollToTop:focus {
+    background-color: #333; /* Darker black on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover/focus */
+}
+
+/* Accessibility: Focus outline */
+#scrollToTop:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5); /* Custom focus outline */
+}
+
+/* For smaller devices (mobile and tablets) */
+@media (max-width: 768px) {
+    #scrollToTop {
+        padding: 8px 16px; /* Slightly smaller padding */
+        font-size: 14px; /* Smaller font size on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #scrollToTop {
+        padding: 6px 12px; /* Even smaller padding on small devices */
+        font-size: 12px; /* Even smaller font size */
+    }
+}
+
+
+</style>
+
+</head>
+<body>
+
+  <div class="contain">
+        <h3>The use of AI for Web Designing</h3>
+        <p class="published"><em>Published on October 16, 2024</em></p>
+ 	<p class="author"><strong>Author: Saroj Basnet & ChatGPT </strong></p>
+        
+       
+        <p>I designed this website using ChatGPT and Notepad. It’s hosted for free on GitHub (which supports static websites), and the ".com.np" domain was also freely available.</p>
+        <p>In today's digital world, artificial intelligence (AI) is changing how we design websites. Tools like ChatGPT help designers and developers make attractive and user-friendly websites more easily.</p>
+        <p>One big advantage of using AI in web design is that it can quickly come up with design ideas. By looking at existing designs and what users like, AI can suggest options that fit current trends and best practices.</p>
+        <p>For my personal website, I used ChatGPT to help with the design. It helped me think of content ideas, improve the layout, and make the overall user experience better. The final result is a clean and organized website that effectively showcases my skills and projects.</p>
+        <p>As AI continues to develop, I believe it will become even more important in web design. It will allow creators to focus more on their creativity and strategies while letting technology handle the more routine tasks.</p>
+
+        <a href="index.html" class="back-link">Back</a>
+    </div>
+<!-- Scroll to top button -->
+<button id="scrollToTop" style="display: none; position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 50%; font-size: 18px;">
+     ↑
+</button>
+
+<script>
+    // Get the scroll-to-top button
+    const scrollBtn = document.getElementById('scrollToTop');
+
+    // Show or hide the button based on scroll position
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollBtn.style.display = "block";  // Show the button when scrolled down
+        } else {
+            scrollBtn.style.display = "none";   // Hide the button when at the top
+        }
+    };
+
+    // Scroll smoothly when the button is clicked
+    scrollBtn.addEventListener('click', () => {
+        // Smooth scroll to the top
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+</body>
+</html>
+
