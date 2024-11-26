@@ -516,13 +516,13 @@ section a:hover {
 
 
 #portfolio {
-    background-color: #f0f8ff; /* A soothing light blue background */
+  background-color: #f0f8ff; /* A soothing light blue background */
   padding: 30px 20px;
   border-radius: 12px;
   margin: 2px auto;
   max-width: 98%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Larger shadow for depth */
-    font-family: 'Open Sans', sans-serif; /* Clean font for readability */
+  font-family: 'Open Sans', sans-serif; /* Clean font for readability */
 }
 
 
@@ -537,7 +537,7 @@ section a:hover {
 }
 
 #portfolio p {
-    font-size: 16px; /* Standard font size */
+    font-size: 24px; /* Standard font size */
     color: #555; /* Darker text color for readability */
     text-align: left; /* Center-aligning introductory text */
     margin-bottom: 30px; /* Space below paragraph */
@@ -546,7 +546,7 @@ section a:hover {
 #portfolio ul {
     list-style-type: none; /* Remove bullet points */
     padding-left: 0; /* Remove default padding */
-    font-size: 16px;
+    font-size: 20px;
 }
 
 #portfolio li {
@@ -556,7 +556,7 @@ section a:hover {
     margin-bottom: 20px; /* Space between list items */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
-    font-size: 16px;
+    font-size: 18px;
 }
 
 #portfolio li:hover {
