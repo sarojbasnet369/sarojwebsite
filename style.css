@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    background: linear-gradient(to bottom,  #151fb0, #12b1e6);
+    background: linear-gradient(to left,  #151fb0, #12b1e6);
     color: #000000; /* Black text color */
     line-height: 1;
     margin: 0;
@@ -9,34 +9,120 @@ body {
     font-size: 16px; /* Base font size for paragraphs */
 }
 
+/* Style for the navigation container */
+.navigation {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    display: flex; /* Align items horizontally */
+    gap: 5px; /* Adjust gap for spacing between items */
+   background-color: #000000;
+    padding: 5px 5px; /* Padding around the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Style for the navigation items */
+.nav-item {
+    padding: 5px 5px;
+    cursor: pointer;
+    background-color: #757474f;
+    border: 1px solid transparent; /* Border for feedback */
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.nav-item:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: white; /* White text */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Active item style */
+.nav-item.active {
+    background-color: #4CAF50;
+    color: white;
+}
 
 
+        .active {
+    background-color: transparent;
+    color: white;
+}
+
+
+        .section {
+            padding: 20px;
+            margin-top: 60px; /* Space for fixed nav */
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+	 
+        
 /* Profile Image Styling (on the left) */
 .profile-image {
-    width: 250px;
+    width: 250px; /* Default size */
     height: auto;
     border-radius: 50%;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
     margin-right: 50px;
-    opacity: 0.9;
+    opacity: 0; /* Initially invisible */
     transition: opacity 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 2s forwards; /* Apply the fade-in animation */
 }
 
 /* Hover Effect for Profile Image */
 .profile-image:hover {
     opacity: 1;
-    transform: scale(1.25);
+    transform: scale(1.25); /* Enlarge on hover */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+        transform: scale(0.1); /* Start slightly smaller */
+    }
+    100% {
+        opacity: 1; /* End with full opacity */
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 150px; /* Smaller size on mobile */
+        margin-right: 30px; /* Reduced margin */
+    }
+}
+
+/* Optional: Fine-tune shadow for smaller screens */
+@media (max-width: 480px) {
+    .profile-image {
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2); /* Softer shadow on mobile */
+    }
 }
 
 
 /* Flexbox for header container */
 .header-container {
+    
     display: flex;
     align-items: center;
     justify-content: center;
     max-width: 1080px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 10px 10px;
 }
 
 
@@ -61,7 +147,6 @@ body {
     font-weight: bold; /* Existing font weight */
     animation: popUp 2s ease-in-out; /* Existing animation */
 }
-
 
 
 /* Pop-up effect */
@@ -99,6 +184,81 @@ body {
     }
 }
 
+
+/* Reduce space above the "Connect with Me" section */
+.social-media {
+     
+    text-align: center;
+    margin: 5px 0; /* Reduce space around the section */
+}
+
+/* Styling for heading */
+.social-media h3 {
+    color: white; /* Heading color */
+    margin-bottom: 5px; /* Space below the heading */
+    font-size: 24px; /* Font size for the heading */
+}
+
+/* List styling */
+.social-media ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center-align items */
+}
+
+/* List item styling */
+.social-media li {
+    margin: 0 8px; /* Reduced space between icons */
+}
+
+/* Icon link styling */
+.social-media a {
+    display: inline-block;
+    width: 20px;
+    height: 24px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on icons */
+.social-media a:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+/* Icon size */
+.social-media i {
+    font-size: 24px;
+}
+
+/* Specific colors for each icon */
+.social-media a.youtube i {
+    color: red;
+}
+
+.social-media a.instagram i {
+    color: #E1306C;
+}
+
+.social-media a.facebook i {
+    color: #1877F2;
+}
+
+.social-media a.linkedin i {
+    color: #0077B5;
+}
+
+.social-media a.github i {
+    color: black;
+}
+
+
+
+
 /* Footer Styling */
 footer {
     color: black;
@@ -107,7 +267,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 
@@ -344,6 +504,7 @@ section a:hover {
     max-width: 98%; /* Limit the width for better readability */
     margin: 2px auto; /* Center the section */
     font-family: 'Open Sans', sans-serif; /* Clean font for readability */
+color: #2c3e50; /* Dark gray for good contrast */
 }
 
 #resume h2 {
@@ -360,6 +521,7 @@ section a:hover {
     margin-bottom: 20px; /* Space between entries */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+color: #2c3e50; /* Dark gray for good contrast */
 }
 
 .education-entry:hover {
@@ -552,6 +714,7 @@ section a:hover {
 #portfolio li {
     background-color: white; /* White background for list items */
     border-radius: 10px; /* Rounded corners */
+color: #555;
     padding: 20px; /* Padding inside list items */
     margin-bottom: 20px; /* Space between list items */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -622,6 +785,8 @@ section a:hover {
     max-width: 98%; /* Limit the width for better readability */
     margin: 2px auto; /* Center the section */
     font-family: 'Open Sans', sans-serif; /* Clean font for readability */
+    color: #03470f;
+    font-size: 14px; /* Larger heading size */
 }
 
 #achievements h2 {
@@ -634,10 +799,11 @@ section a:hover {
 #achievements ul {
     list-style-type: none; /* Remove bullet points */
     padding-left: 0; /* Remove default padding */
+  
 }
 
 #achievements li {
-    background-color: white; /* White background for list items */
+    background-color: #d1d7de; /* White background for list items */
     border-radius: 8px; /* Rounded corners */
     padding: 15px; /* Padding inside list items */
     margin-bottom: 15px; /* Space between list items */
@@ -646,6 +812,7 @@ section a:hover {
 }
 
 #achievements li:hover {
+  
     transform: translateY(-3px); /* Lift effect on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
@@ -750,14 +917,16 @@ section a:hover {
     }
 }
 
+
+
 #contact {
     background-color: #f9f9f9; /* Light background for the contact section */
     padding: 20px; /* Add some padding */
     border-radius: 10px; /* Rounded corners */
     max-width: 98%; /* Limit the width of the form */
-    margin: 30px auto; /* Center the form */
+    margin: 25px auto; /* Center the form */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-   text-align: center; /* Center the text */
+    text-align: center; /* Center the text */
 }
 
 .contact-form {
@@ -896,154 +1065,9 @@ section a:hover {
         position: relative;
     }
 
-    /* Dropdown container */
-.dropdown {
-    position: fixed;                    /* Fixes the dropdown in the viewport */
-    top: 20px;                          /* Position from the top of the viewport */
-    right: 20px;                        /* Position from the right of the viewport */
-    background-color: black;            /* Black background for the dropdown */
-    padding: 8px 12px;                  /* Adds space inside the box for better appearance */
-    border-radius: 8px;                 /* Rounded corners for a smoother look */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth and elevation */
-    z-index: 1000;                      /* Ensures dropdown is on top of other elements */
-    transition: transform 0.3s ease;    /* Transition for smooth scaling */
-}
+   
 
-/* Scale effect on hover */
-.dropdown:hover {
-    transform: scale(1.1);              /* Slightly enlarge the dropdown on hover */
-}
-
-
-    /* Three dots button */
-    .dropdown button {
-        font-size: 48px;            /* Makes the dots larger */
-        background: none;
-        border: none;
-	border-radius: 8px; 
-        color: white;               /* White dots on black background */
-        cursor: pointer;
-        padding: 0;                 /* Removes padding around the button */
-        transition: transform 0.3s ease;
-    }
-
-    /* Hover effect for the button */
-    .dropdown button:hover {
-        transform: scale(1.1);      /* Slightly enlarge on hover */
-    }
-
-    /* Dropdown content styles */
-    .dropdown-content {
-        display: none; /* Hidden by default */
-        position: absolute;
-        top: 50px;
-        right: 0;
-        background-color: #990303; /* Background color for dropdown */
-        min-width: 160px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 10px; /* Rounded corners */
-        animation: fadeIn 0.3s; /* Animation for dropdown */
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-5px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    .dropdown-content button {
-        width: 100%; /* Full-width buttons in dropdown */
-        text-align: left;
-        font-size: 18px; /* Inside content text size */
-        background: none;
-        border: none;
-	border-radius: 8px; 
-        padding: 10px 15px;
-        color: white;
-        cursor: pointer;
-        transition: background-color 0.3s ease; /* Transition for hover effect */
-    }
-
-    .dropdown-content button:hover {
-        background-color: #292828; /* Darker color on hover */
-    }
-
-    .show {
-        display: block; /* Show dropdown when toggled */
-    }
-
-    /* Section styles */
-    .section, #profile {
-        display: none; /* Hide sections and profile initially */
-    }
-
-    /* Initial profile section shown */
-    #profile {
-        display: block; /* Show profile by default */
-        color: white;
-    }
+ 
 
 
 
-
-.social-media {
-    text-align: center; /* Center the social media section */
-    margin: 10px 0; /* Space around the section */
-}
-
-.social-media h3 {
-    color: white; /* Heading color */
-    margin-bottom: 15px; /* Space below the heading */
-    font-size: 24px; /* Font size for the heading */
-}
-
-.social-media ul {
-    list-style-type: none; /* Remove bullets from list */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center align the items */
-}
-
-.social-media li {
-    margin: 0 10px; /* Space between icons */
-}
-
-.social-media a {
-    display: inline-block; /* Allows for setting width and height */
-    width: 50px; /* Set width for square box */
-    height: 45px; /* Set height for square box */
-    background-color: white; /* White background for icons */
-    border-radius: 8px; /* Slightly rounded corners */
-    text-align: center; /* Center the icon inside the box */
-    line-height: 50px; /* Vertically center the icon */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for effects */
-}
-
-.social-media a:hover {
-    background-color: #f0f0f0; /* Light gray on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
-}
-
-.social-media i {
-    font-size: 24px; /* Size of the icons */
-}
-
-/* Specific colors for each icon */
-.social-media a.youtube i {
-    color: red; /* YouTube color */
-}
-
-.social-media a.instagram i {
-    color: #E1306C; /* Instagram color */
-}
-
-.social-media a.facebook i {
-    color: #1877F2; /* Facebook color */
-}
-
-.social-media a.linkedin i {
-    color: #0077B5; /* LinkedIn color */
-}
-
-.social-media a.github i {
-    color: black; /* GitHub color */
-}
