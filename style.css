@@ -1,28 +1,35 @@
 /* General Styles */
 body {
-    background: linear-gradient(to left,  #151fb0, #12b1e6);
-    color: #000000; /* Black text color */
-    line-height: 1;
+    background: linear-gradient(to right, #151fb0, #12b1e6); /* Smooth gradient for background */
+    color: #000000; /* Black text for readability */
+    line-height: 1.6; /* Adjusted for better readability */
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px; /* Base font size for paragraphs */
+    font-family: 'Poppins', sans-serif; /* Modern and clean font */
+    font-size: 16px; /* Base font size for body text */
+    -webkit-font-smoothing: antialiased; /* Smooth font rendering for webkit browsers */
+    -moz-osx-font-smoothing: grayscale; /* Smooth font rendering for macOS */
+    overflow-x: hidden; /* Prevent horizontal scrolling caused by elements */
+   
 }
+
+
 
 /* Style for the navigation container */
 .navigation {
     position: fixed;
     top: 10px;
-    right: 10px;
+    right: 40px;
     z-index: 1000;
     display: flex; /* Align items horizontally */
     flex-wrap: wrap; /* Allow items to wrap onto the next line */
     gap: 5px; /* Adjust gap for spacing between items */
-    background-color: rgba(38, 97, 1, 0.6); /* RGBA values for #266101 with 60% opacity */
+    background-color: rgba(27, 66, 2, 0.7); /* RGBA values for #266101 with 60% opacity */
     padding: 5px 5px; /* Padding around the container */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     max-width: 100%; /* Prevent overflow */
+    overflow-x: hidden; /* Ensure no horizontal scroll due to overflow */
 }
 
 /* Style for the navigation items */
@@ -43,7 +50,7 @@ body {
 .nav-item:hover {
     background-color: #4CAF50; /* Green background on hover */
     color: white; /* White text */
-    transform: scale(1.05); /* Slight scale effect */
+    transform: scale(1.08); /* Slight scale effect */
 }
 
 .nav-item.active {
@@ -53,7 +60,6 @@ body {
     transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for the glow */
 }
 
-
 /* General active class for better customization */
 .active {
     background-color: transparent;
@@ -61,31 +67,42 @@ body {
 }
 
 /* Responsive styling for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .navigation {
-         /* Resize navigation container */
-        right: 0%; /* Center the navigation */
- 
-    }
-
-    .nav-item {
-        padding: 2px; /* Reduce padding for smaller screens */
-        font-size: 10px; /* Smaller font size */
-    }
-}
-
-@media (max-width: 480px) {
-    .navigation {
-        width: 100%; /* Full width for smaller devices */
-        right: 0;
-        left: 0;
+        width: calc(100% - 20px); /* Full width minus 10px for the right gap */
+        right: 2px; /* Ensure a 10px gap from the right edge */
+        justify-content: center; /* Center all items */
+        gap: 5px; /* Add spacing between items */
+        transform: none; /* Reset transform for full-width layout */
     }
 
     .nav-item {
         padding: 2px; /* Smaller padding */
         font-size: 10px; /* Further reduced font size */
+        flex: 0 1 auto; /* Let items shrink based on content */
     }
 }
+
+/* Responsive styling for smaller mobile devices */
+@media (max-width: 400px) {
+    .navigation {
+        width: calc(100% - 20px); /* Full width minus 10px for the right gap */
+        right: 2px; /* Ensure a 10px gap from the right edge */
+        justify-content: center; /* Center all items */
+        gap: 5px; /* Add spacing between items */
+        transform: none; /* Reset transform for full-width layout */
+    }
+
+    .nav-item {
+        padding: 2px; /* Smaller padding */
+        font-size: 8px; /* Further reduced font size */
+        flex: 0 1 auto; /* Let items shrink based on content */
+    }
+}
+
+ 
+
+
 
 .section {
     display: none; /* Hide all sections by default */
@@ -105,20 +122,23 @@ body {
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
     margin-right: 50px;
     opacity: 1; /* Initially invisible */
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     animation: fadeIn 2s forwards; /* Apply the fade-in animation */
+    transform: scale(1); /* Add this line */
 }
 
-/* Hover Effect for Profile Image */
 .profile-image:hover {
-    opacity: 1;
-    transform: scale(1.25); /* Enlarge on hover */
+    transform: scale(1.25) !important; /* Force scale to apply */
+    transition: transform 0.9s ease;
+    box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.8);
 }
+
+
 
 /* Fade-In Animation */
 @keyframes fadeIn {
     0% {
-        opacity: 0; /* Start with opacity 0 */
+        opacity: 0.3; /* Start with opacity 0 */
         transform: scale(0.1); /* Start slightly smaller */
     }
     100% {
@@ -158,6 +178,7 @@ body {
 /* Text Styling on the right */
 .header-text {
     text-align: left;
+
 }
 
 .header-text h1 {
@@ -169,7 +190,7 @@ body {
 
 .header-text p {
     font-size: 16px;
-    margin-top: 2px;
+    margin-top: 20px;
 }
 
 .glitter-effect {
@@ -185,7 +206,7 @@ body {
 }
 
 /* Responsive adjustments for screens 768px or smaller */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .header-container {
         display: flex;
         flex-direction: column; /* Stacks the elements vertically */
@@ -204,7 +225,7 @@ body {
     }
 
     .about-text {
-        font-size: 14px; /* Smaller font size for mobile */
+        font-size: 12px; /* Smaller font size for mobile */
         margin-top: 10px; /* Adds space above the about-text */
     }
 
@@ -212,6 +233,7 @@ body {
         margin-bottom: 10px; /* Adds space between the paragraphs */
     }
 }
+
 
  
 /* General styling for the social-media section */
@@ -293,19 +315,20 @@ body {
     }
 
     .social-media a {
-        width: 32px; /* Smaller icon size for mobile */
-        height: 32px;
+        width: 8px; /* Smaller icon size for mobile */
+        height: 8px;
     }
 
     .social-media i {
-        font-size: 18px; /* Adjust icon size for mobile */
+        font-size: 14px; /* Adjust icon size for mobile */
     }
 
     .social-media h3 {
-        font-size: 18px; /* Slightly smaller heading */
-        margin-bottom: 6px;
+        font-size: 14px; /* Slightly smaller heading */
+        margin-bottom: 2px;
     }
 }
+
 
 
 
@@ -313,14 +336,34 @@ body {
 
 /* Footer Styling */
 footer {
-    color: black;
-    text-align: center;
-    padding: 0 0;
+    
+    color: white; /* White text for contrast */
+    text-align: center; /* Center-align the text */
+    padding: 8px 8px; /* Add spacing for visual comfort */
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    font-size: 14px; /* Comfortable font size */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow above the footer */
     position: relative;
     bottom: 0;
     width: 100%;
-    font-size: 12px;
+    margin-top: 10px; /* Space between content and footer */
 }
+footer p {
+    font-size: 16px;
+}
+
+
+/* Add responsiveness for smaller devices */
+@media (max-width: 768px) {
+    footer {
+        font-size: 12px; /* Adjust font size for tablets and smaller screens */
+        padding: 0px; /* Reduce padding */
+    }
+    footer p {
+        font-size: 12px;
+    }
+}
+
 
 
 
@@ -339,7 +382,7 @@ section {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 32px;
     color: #2c3e50;
     border-bottom: 2px solid #4ca1af;
     padding-bottom: 10px;
@@ -350,11 +393,11 @@ h2 {
 p, li {
     font-size: 22px;
     line-height: 1.7;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 ul {
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 
@@ -481,16 +524,17 @@ section a:hover {
 
 #youtube h2 {
     color: #333; /* Darker color for the heading */
-    margin-bottom: 15px; /* Space below heading */
+    margin-bottom: 10px; /* Space below heading */
     font-size: 32px;
     text-align: center; /* Center the text */
 }
 
 #youtube p {
     color: #555; /* Slightly lighter color for body text */
-    margin-bottom: 20px; /* Space below paragraphs */
+    margin-bottom: 10px; /* Space below paragraphs */
     line-height: 1.5; /* Improve readability */
     text-align: left; /* Align the text to the left */
+    font-size: 18px;
 }
 
 .youtube-link {
@@ -537,92 +581,19 @@ section a:hover {
         flex: 1 1 calc(45% - 20px); /* Show 2 videos on medium screens */
     }
 }
+#youtube p { 
+   font-size: 14px; 
+}
 
-@media (max-width: 480px) {
-    .video-container iframe {
+@media (max-width: 480px) 
+{
+    .video-container iframe 
+    {
         flex: 1 1 100%; /* Show 1 video on small screens */
     }
-}
-
-
-
-
-
-#resume {
-    padding: 30px 20px; /* Generous padding for spacing */
-    background-color: #e3f2fd; /* Soft light blue background */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 98%; /* Limit the width for better readability */
-    margin: 2px auto; /* Center the section */
-    font-family: 'Open Sans', sans-serif; /* Clean font for readability */
-color: #2c3e50; /* Dark gray for good contrast */
-}
-
-#resume h2 {
-    font-size: 32px; /* Larger heading size */
-    color: #2c3e50; /* Dark gray for good contrast */
-    text-align: center; /* Center the heading */
-    margin-bottom: 20px; /* Space below the heading */
-}
-
-.education-entry {
-    background-color: white; /* White background for education entries */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside education entries */
-    margin-bottom: 20px; /* Space between entries */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
-	color: #2c3e50; /* Dark gray for good contrast */
-}
-
-.education-entry:hover {
-    transform: translateY(-3px); /* Lift effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
-
-.education-entry h3 {
-    font-size: 20px; /* Slightly larger font for education titles */
-    color: #2c3e50; /* Dark gray for contrast */
-    margin-bottom: 10px; /* Space below education title */
-}
-
-.resume-link {
-    display: block; /* Display as block for full-width link */
-    text-align: center; /* Center the link */
-    margin-top: 30px; /* Space above the link */
-    padding: 10px 20px; /* Padding for button effect */
-    background-color: #4CAF50; /* Green background for link */
-    color: white; /* White text color */
-    border-radius: 9px; /* Rounded corners */
-    text-decoration: none; /* No underline */
-    font-size: 14px; /* Font size for the link */
-    transition: background-color 0.3s; /* Transition for background color */
-    width: 80%; /* Button will take 80% of the container's width */
-    max-width: 300px; /* Prevents it from becoming too wide on large screens */
-    margin: 3px auto; /* Centers the button if it has a fixed width */
-}
-
-.resume-link:hover {
-    background-color: #388E3C; /* Darker green on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #resume h2 {
-        font-size: 24px; /* Smaller heading on mobile */
-    }
-
-    .education-entry {
-        padding: 16px; /* Smaller padding on mobile */
-    }
-
-    .education-entry h3 {
-        font-size: 12px; /* Smaller education title on mobile */
-    }
-
-    .resume-link {
-        font-size: 12/* Smaller link text on mobile */
+#youtube p 
+    {   
+        font-size: 12px;
     }
 }
 
@@ -642,7 +613,7 @@ color: #2c3e50; /* Dark gray for good contrast */
 }
 
 #skills:hover {
-  transform: scale(1.02); /* Slight zoom on hover for interactivity */
+  transform: scale(1.004); /* Slight zoom on hover for interactivity */
 }
 
 /* Heading Styling */
@@ -855,12 +826,17 @@ color: #2c3e50; /* Dark gray for good contrast */
 }
 
 #achievements li {
+    font-size: 16px; /* Larger heading size */
     background-color: #d1d7de; /* White background for list items */
     border-radius: 8px; /* Rounded corners */
     padding: 15px; /* Padding inside list items */
     margin-bottom: 15px; /* Space between list items */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+}
+#achievements p {
+    font-size: 16px; /* Larger heading size */
+     
 }
 
 #achievements li:hover {
@@ -884,7 +860,12 @@ color: #2c3e50; /* Dark gray for good contrast */
 
     #achievements li {
         padding: 10px; /* Smaller padding on mobile */
+	font-size: 12px; /* Larger heading size */
     }
+   #achievements p {
+    font-size: 12px; /* Larger heading size */
+     
+}
 }
 
 
@@ -904,6 +885,9 @@ color: #2c3e50; /* Dark gray for good contrast */
     color: #2c3e50; /* Dark gray for good contrast */
     text-align: center; /* Center the heading */
     margin-bottom: 20px; /* Space below the heading */
+}
+#blog h3 {
+    font-size: 20px; /* Larger heading size */
 }
 
 #blog p {
@@ -958,6 +942,8 @@ color: #2c3e50; /* Dark gray for good contrast */
 
     #blog p {
         font-size: 14px; /* Smaller paragraph text on mobile */
+    } #blog h3 {
+        font-size: 16px; /* Smaller paragraph text on mobile */
     }
 
     .blog-entry {
@@ -971,6 +957,102 @@ color: #2c3e50; /* Dark gray for good contrast */
 
 
 
+
+#resume {
+    padding: 30px 20px; /* Generous padding for spacing */
+    background-color: #e3f2fd; /* Soft light blue background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 98%; /* Limit the width for better readability */
+    margin: 2px auto; /* Center the section */
+    font-family: 'Open Sans', sans-serif; /* Clean font for readability */
+color: #2c3e50; /* Dark gray for good contrast */
+}
+
+#resume h2 {
+    font-size: 32px; /* Larger heading size */
+    color: #2c3e50; /* Dark gray for good contrast */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+#resume h3 {
+    font-size: 20px; /* Larger heading size */
+     
+}
+#resume p {
+    font-size: 14px; /* Larger heading size */
+     
+}
+
+.education-entry {
+    background-color: white; /* White background for education entries */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside education entries */
+    margin-bottom: 20px; /* Space between entries */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+	color: #2c3e50; /* Dark gray for good contrast */
+}
+
+.education-entry:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.education-entry h3 {
+    font-size: 20px; /* Slightly larger font for education titles */
+    color: #2c3e50; /* Dark gray for contrast */
+    margin-bottom: 10px; /* Space below education title */
+}
+
+.resume-link {
+    display: block; /* Display as block for full-width link */
+    text-align: center; /* Center the link */
+    margin-top: 30px; /* Space above the link */
+    padding: 10px 20px; /* Padding for button effect */
+    background-color: #4CAF50; /* Green background for link */
+    color: white; /* White text color */
+    border-radius: 9px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    font-size: 14px; /* Font size for the link */
+    transition: background-color 0.3s; /* Transition for background color */
+    width: 80%; /* Button will take 80% of the container's width */
+    max-width: 300px; /* Prevents it from becoming too wide on large screens */
+    margin: 3px auto; /* Centers the button if it has a fixed width */
+}
+
+.resume-link:hover {
+    background-color: #388E3C; /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #resume h2 {
+        font-size: 24px; /* Smaller heading on mobile */
+    }
+#resume h3 {
+    font-size: 16px; /* Larger heading size */
+     
+}
+#resume p {
+    font-size: 12px; /* Larger heading size */
+     
+}
+
+    .education-entry {
+        padding: 16px; /* Smaller padding on mobile */
+    }
+
+     
+
+    .resume-link {
+        font-size: 12/* Smaller link text on mobile */
+    }
+}
+
+
+
+
 #contact {
     background-color: #f9f9f9; /* Light background for the contact section */
     padding: 20px; /* Add some padding */
@@ -979,6 +1061,14 @@ color: #2c3e50; /* Dark gray for good contrast */
     margin: 25px auto; /* Center the form */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     text-align: center; /* Center the text */
+}
+#contact h3 {
+    font-size: 24px;
+    color: #080000;            /* Darker text color */
+}
+#contact p {
+    font-size: 16px;
+    color: #080000;            /* Darker text color */
 }
 
 .contact-form {
@@ -1049,72 +1139,3 @@ color: #2c3e50; /* Dark gray for good contrast */
     background-color: #ccc; /* Grey background for disabled state */
     color: #666;            /* Darker text color */
 }
-
-
-
-
-/* Media Queries for Responsive Design */
-@media (max-width: 700px) {
-    /* Header Adjustments */
-    header {
-        padding: 15px;
-    }
-
-    /* Profile Image */
-    .profile-image {
-        width: 80%; /* Make the image responsive */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    /* Section Padding */
-    section {
-        padding: 15px; /* Adjust section padding */
-    }
-
-    /* Text Size Adjustments */
-    h2 {
-        font-size: 28px; /* Decrease header size */
-    }
-
-    p {
-        font-size: 16px; /* Decrease paragraph size */
-    }
-
-    /* Adjust the YouTube iframe */
-    iframe {
-        width: 100%; /* Full width for mobile */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    /* Contact Form */
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%; /* Full width for inputs */
-        margin: 5px 0; /* Adjust margin */
-    }
-}
-
-@media (max-width: 700px) {
-    /* Additional adjustments for very small screens */
-    h2 {
-        font-size: 28px; /* Further decrease header size */
-    }
-
-    p {
-        font-size: 16px; /* Further decrease paragraph size */
-    }
-}
-
-
-
-
-    /* Basic page and profile styles */
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #ffffff;
-        margin: 0;
-        padding: 20px;
-        position: relative;
-    }
-
-   
