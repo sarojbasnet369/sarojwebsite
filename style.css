@@ -90,7 +90,8 @@ section {
     position: relative;
     font-size: 1.1rem;
 }
-* Bullet for Main Agenda */
+
+/* Bullet for Main Agenda */
 #agenda > ul > li::before {
     content: "●"; /* Checkmark */
     color: #000000;
@@ -107,7 +108,6 @@ section {
     left: 0;
     font-size: 1.1rem;
 }
-
 
 
 /* Support Section */
