@@ -102,7 +102,7 @@ section {
 
 /* Bullet for Subpoints */
 #agenda ul ul li::before {
-    content: "➤"; /* Right arrow */
+    content: "-"; /* Right arrow */
     color: #001a80;
     position: absolute;
     left: 0;
