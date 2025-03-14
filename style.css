@@ -86,18 +86,29 @@ section {
 
 #agenda ul li {
     margin-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 25px;
     position: relative;
     font-size: 1.1rem;
 }
 
-#agenda ul li::before {
-    content: "✔";
+/* Bullet for Main Agenda */
+#agenda > ul > li::before {
+    content: "✔"; /* Checkmark */
     color: #004080;
     position: absolute;
     left: 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
+
+/* Bullet for Subpoints */
+#agenda ul ul li::before {
+    content: "➤"; /* Right arrow */
+    color: #008000;
+    position: absolute;
+    left: 0;
+    font-size: 1.1rem;
+}
+
 
 /* Support Section */
 #support {
