@@ -259,35 +259,6 @@ button:disabled {
     border: 1px solid #999; /* Gray border */
 }
 
-
-.image-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 10px; /* Add a small gap between the images */
-}
-
-img {
-    width: 80%; /* Make images fill their grid cells */
-    height: auto; /* Maintain aspect ratio */
-}
-.video-container {
-    display: flex; /* Use Flexbox to align videos side by side */
-    justify-content: space-between; /* Add space between the videos */
-    gap: 10px; /* Add a small gap between the videos */
-    margin-bottom: 20px; /* Add space below the video container */
-}
-
-.video-wrapper {
-    flex: 1; /* Each video wrapper takes equal space */
-    text-align: center; /* Center-align the video and caption */
-}
-
-video {
-    width: 100%; /* Make the video fill its container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure the video is centered */
-}
-
 .video-caption {
     margin-top: 10px; /* Add space between the video and caption */
     font-size: 1.2em; /* Increase font size */
@@ -295,7 +266,7 @@ video {
     color: #333; /* Set text color */
 }
 
-
+/* Symbol Container */
 .symbol-container {
     display: inline-block; /* Make the container fit the image size */
     text-align: center; /* Center the image horizontally */
@@ -306,3 +277,42 @@ video {
     height: auto; /* Maintain aspect ratio */
     vertical-align: middle; /* Align the image vertically */
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    /* Image Container */
+    .image-container {
+        grid-template-columns: 1fr; /* Stack images vertically on small screens */
+    }
+
+    img {
+        width: 60%; /* Make images full width on small screens */
+        vertical-align: middle; /* Align the image vertically */
+    }
+
+    /* Video Container */
+    .video-container {
+        flex-direction: column; /* Stack videos vertically on small screens */
+        vertical-align: middle; /* Align the image vertically */
+    }
+
+    .video-wrapper {
+        width: 60%; /* Make videos full width on small screens */
+        vertical-align: middle; /* Align the image vertically */
+    }
+
+    video {
+        width: 60%; /* Ensure videos fill their containers */
+        vertical-align: middle; /* Align the image vertically */
+    }
+
+    .video-caption {
+        font-size: 1em; /* Reduce font size for smaller screens */
+    }
+
+    /* Symbol Container */
+    .symbol-image {
+        width: 50px; /* Reduce symbol size for smaller screens */
+    }
+}
+
