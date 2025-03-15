@@ -19,6 +19,7 @@
             <li><a href="#diff">Difference</a></li>
             <li><a href="#support">Support</a></li>
             <li><a href="#email">Connect</a></li>
+            <li><a href="#sample">Sample</a></li>
             
         </ul>
     </nav>
@@ -117,94 +118,100 @@
         <img src="symbol.png"  width="100px">
     </section>
 
-    <section id="email">
-        <h2>Connect with Me</h2>
-        <p>Feel free to reach out via email or connect on Facebook.</p>
-        <ul>
-            <li>Email: <a href="mailto:sarojbasnetp@gmail.com">sarojbasnetp@gmail.com</a></li>
-            <li>Facebook: <a href="https://www.facebook.com/sarojbasnet369" target="_blank">Facebook Profile</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/sarojbasnet369/" target="_blank">LinkedIn Profile</a></li>
- 
-        </ul>
-    </section>
+  
+        <section id="email">
+            <h2>Connect with Me</h2>
+            <p>Feel free to reach out via email or connect on Facebook.</p>
+            <ul>
+                <li>Email: <a href="mailto:sarojbasnetp@gmail.com">sarojbasnetp@gmail.com</a></li>
+                <li>Facebook: <a href="https://www.facebook.com/sarojbasnet369" target="_blank">Facebook Profile</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/sarojbasnet369/" target="_blank">LinkedIn Profile</a></li>
+            </ul>
+        </section>
     
-    <h2>Sample: FSU Program Expense Details</h2>
-
-    <!-- Table to Display Expenses -->
-    <table>
-        <thead>
-            <tr>
-                <th>Program Name</th>
-                <th>Date</th>
-                <th>Expense Description</th>
-                <th>Amount (Rs.)</th>
-                <th>Paid By</th>
-                <th>Person</th>
-                <th>Shop</th>
-                <th>Bill Photo</th>
-            </tr>
-        </thead>
-        <tbody id="expenseTable">
-            <!-- Expense details will be dynamically added here -->
-        </tbody>
-    </table>
-
-    <!-- Form to Add New Expense -->
-    <form id="expenseForm">
-        <h3>Add New Expense</h3>
-        <input type="text" id="programName" placeholder="Program Name" required>
-        <input type="date" id="programDate" required>
-        <input type="text" id="expenseDesc" placeholder="Expense Description" required>
-        <input type="number" id="expenseAmount" placeholder="Amount in Rs." required>
-        <input type="text" id="paidBy" placeholder="Paid By (Cash/Cheque/etc.)" required>
-        <input type="text" id="person" placeholder="Person Responsible" required>
-        <input type="text" id="shop" placeholder="Shop Name" required>
-        <input type="file" id="billPhoto" accept="image/*">
-        <div id="errorMessage" class="error"></div>
-        <button type="button" onclick="addExpense()">Add Expense</button>
-    </form>
-
-    <script>
-        function addExpense() {
-            // Get form inputs
-            const programName = document.getElementById("programName").value.trim();
-            const programDate = document.getElementById("programDate").value;
-            const expenseDesc = document.getElementById("expenseDesc").value.trim();
-            const expenseAmount = document.getElementById("expenseAmount").value.trim();
-            const paidBy = document.getElementById("paidBy").value.trim();
-            const person = document.getElementById("person").value.trim();
-            const shop = document.getElementById("shop").value.trim();
-            const billPhoto = document.getElementById("billPhoto").files[0];
-            const errorMessage = document.getElementById("errorMessage");
-
-            // Validate inputs
-            if (!programName || !programDate || !expenseDesc || !expenseAmount || !paidBy || !person || !shop) {
-                errorMessage.textContent = "Please fill in all fields before adding an expense.";
-                return;
-            } else {
-                errorMessage.textContent = ""; // Clear error message
+        <section id="sample">
+            <h2>Sample: FSU Program Expense Details</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Program Name</th>
+                            <th>Date</th>
+                            <th>Expense Description</th>
+                            <th>Amount (Rs.)</th>
+                            <th>Paid By</th>
+                            <th>Person</th>
+                            <th>Shop</th>
+                            <th>Bill Photo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenseTable">
+                        <!-- Example row with data-label attributes -->
+                        <tr>
+                            <td data-label="Program Name">FSU Candidacy Form</td>
+                            <td data-label="Date">2081-12-26</td>
+                            <td data-label="Expense Description">Form for Candidate</td>
+                            <td data-label="Amount (Rs.)">100</td>
+                            <td data-label="Paid By">Online</td>
+                            <td data-label="Person">Saroj Basnet</td>
+                            <td data-label="Place">Campus</td>
+                            <td data-label="Bill Photo">Photo</td>
+                        </tr>
+                        <!-- Add more rows dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        
+            <form id="expenseForm">
+                <h3>Add New Expense</h3>
+                <input type="text" id="programName" placeholder="Program Name" required>
+                <input type="date" id="programDate" required>
+                <input type="text" id="expenseDesc" placeholder="Expense Description" required>
+                <input type="number" id="expenseAmount" placeholder="Amount in Rs." required>
+                <input type="text" id="paidBy" placeholder="Paid By (Cash/Cheque/etc.)" required>
+                <input type="text" id="person" placeholder="Person Responsible" required>
+                <input type="text" id="shop" placeholder="Shop Name" required>
+                <input type="file" id="billPhoto" accept="image/*">
+                <div id="errorMessage" class="error"></div>
+                <button type="button" onclick="addExpense()">Add Expense</button>
+            </form>
+        </section>
+    
+        <script>
+            function addExpense() {
+                const programName = document.getElementById("programName").value.trim();
+                const programDate = document.getElementById("programDate").value;
+                const expenseDesc = document.getElementById("expenseDesc").value.trim();
+                const expenseAmount = document.getElementById("expenseAmount").value.trim();
+                const paidBy = document.getElementById("paidBy").value.trim();
+                const person = document.getElementById("person").value.trim();
+                const shop = document.getElementById("shop").value.trim();
+                const billPhoto = document.getElementById("billPhoto").files[0];
+                const errorMessage = document.getElementById("errorMessage");
+    
+                if (!programName || !programDate || !expenseDesc || !expenseAmount || !paidBy || !person || !shop) {
+                    errorMessage.textContent = "Please fill in all fields before adding an expense.";
+                    return;
+                } else {
+                    errorMessage.textContent = "";
+                }
+    
+                const table = document.getElementById("expenseTable");
+                const newRow = table.insertRow();
+    
+                newRow.innerHTML = `
+                    <td>${programName}</td>
+                    <td>${programDate}</td>
+                    <td>${expenseDesc}</td>
+                    <td>${expenseAmount}</td>
+                    <td>${paidBy}</td>
+                    <td>${person}</td>
+                    <td>${shop}</td>
+                    <td>${billPhoto ? `<img src="${URL.createObjectURL(billPhoto)}" alt="Bill Photo">` : "No Photo"}</td>
+                `;
+    
+                document.getElementById("expenseForm").reset();
             }
-
-            // Create a new row in the table
-            const table = document.getElementById("expenseTable");
-            const newRow = table.insertRow();
-
-            // Add cells to the row
-            newRow.innerHTML = `
-                <td>${programName}</td>
-                <td>${programDate}</td>
-                <td>${expenseDesc}</td>
-                <td>${expenseAmount}</td>
-                <td>${paidBy}</td>
-                <td>${person}</td>
-                <td>${shop}</td>
-                <td>${billPhoto ? `<img src="${URL.createObjectURL(billPhoto)}" alt="Bill Photo">` : "No Photo"}</td>
-            `;
-
-            // Clear the form after adding
-            document.getElementById("expenseForm").reset();
-        }
-    </script>
-     
-</body>
-</html>
+        </script>
+    </body>
+    </html>
