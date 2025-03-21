@@ -1,0 +1,317 @@
+ /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #007BFF;
+    margin-top: 0;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input, form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    form input, form button {
+        padding: 8px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    section {
+        padding: 18px;
+        margin: 18px;
+    }
+}
+
+/* Table Container */
+.table-container {
+    width: 100%; /* Make the container fill its parent */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin-bottom: 20px; /* Add space below the table */
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Make the table fill its container */
+    border-collapse: collapse; /* Remove spacing between cells */
+    table-layout: fixed; /* Ensure columns respect their widths */
+}
+
+table th, table td {
+    padding: 10px; /* Add padding for readability */
+    border: 1px solid #ddd; /* Add borders to cells */
+    text-align: left; /* Align text to the left */
+    word-wrap: break-word; /* Allow text to wrap within cells */
+}
+
+table th {
+    background-color: #f4f4f4; /* Add a light background to headers */
+}
+
+
+/* Mobile Styles for Table */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9em; /* Reduce font size for smaller screens */
+    }
+
+    table th, table td {
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
+
+    /* Make the table fit the container */
+    table {
+        width: 100%;
+        display: block;
+    }
+
+    table thead, table tbody, table th, table td, table tr {
+        display: block;
+    }
+
+    table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    table tr {
+        border: 1px solid #ccc;
+    }
+
+    table td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%; /* Add space for labels */
+    }
+
+    table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label); /* Use data-label attribute for labels */
+        font-weight: bold;
+    }
+}
+
+button:disabled {
+    background-color: #17d62d; /* Gray background */
+    color: #000000; /* Dark gray text */
+    cursor: not-allowed; /* Show "not allowed" cursor */
+    border: 1px solid #999; /* Gray border */
+}
+
+.video-caption {
+    margin-top: 10px; /* Add space between the video and caption */
+    font-size: 1.2em; /* Increase font size */
+    font-weight: bold; /* Make the caption bold */
+    color: #333; /* Set text color */
+}
+
+/* Symbol Container */
+.symbol-container {
+    display: inline-block; /* Make the container fit the image size */
+    text-align: center; /* Center the image horizontally */
+}
+
+.symbol-image {
+    width: 100px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align the image vertically */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    /* Image Container */
+    .image-container {
+        grid-template-columns: 1fr; /* Stack images vertically on small screens */
+    }
+
+    img {
+        width: 60%; /* Make images full width on small screens */
+        vertical-align: middle; /* Align the image vertically */
+    }
+
+    /* Video Container */
+    .video-container {
+        flex-direction: column; /* Stack videos vertically on small screens */
+        vertical-align: middle; /* Align the image vertically */
+    }
+
+    .video-wrapper {
+        width: 60%; /* Make videos full width on small screens */
+        vertical-align: middle; /* Align the image vertically */
+    }
+
+    video {
+        width: 60%; /* Ensure videos fill their containers */
+        vertical-align: middle; /* Align the image vertically */
+    }
+
+    .video-caption {
+        font-size: 1em; /* Reduce font size for smaller screens */
+    }
+
+    /* Symbol Container */
+    .symbol-image {
+        width: 50px; /* Reduce symbol size for smaller screens */
+    }
+}
