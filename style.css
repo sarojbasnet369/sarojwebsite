@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    background: linear-gradient(to right, #151fb0, #12b1e6); /* Smooth gradient for background */
+    background: linear-gradient(to right, #12b1e6, #151fb0); /* Smooth gradient for background */
     color: #000000; /* Black text for readability */
     line-height: 1.6; /* Adjusted for better readability */
     margin: 0;
