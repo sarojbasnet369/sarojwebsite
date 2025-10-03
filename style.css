@@ -948,7 +948,7 @@ section a:hover {
   }
 
   .research-img {
-    width: 50%;
+    width: 70%;
     height: auto;
   }
 
@@ -1229,4 +1229,5 @@ color: #2c3e50; /* Dark gray for good contrast */
     background-color: #ccc; /* Grey background for disabled state */
     color: #666;            /* Darker text color */
 }
+
 
