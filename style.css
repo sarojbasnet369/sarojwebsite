@@ -872,9 +872,17 @@ section a:hover {
 
 /* Research Section */
 #research {
-  padding: 60px 20px;
-  background: #f9f9f9;
+    padding: 30px 20px; /* Generous padding for spacing */
+    background-color: #ffffff; /* Soft light green background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 95%; /* Limit the width for better readability */
+    margin: 2px auto; /* Center the section */
+    font-family: 'Open Sans', sans-serif; /* Clean font for readability */
+    color: #012708;
+    font-size: 12px; /* Larger heading size */
 }
+
 
 #research .section-title {
   text-align: center;
@@ -1229,6 +1237,7 @@ color: #2c3e50; /* Dark gray for good contrast */
     background-color: #ccc; /* Grey background for disabled state */
     color: #666;            /* Darker text color */
 }
+
 
 
 
