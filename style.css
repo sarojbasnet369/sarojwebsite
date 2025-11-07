@@ -1115,7 +1115,7 @@ color: #2c3e50; /* Dark gray for good contrast */
     font-size: 14px; /* Font size for the link */
     transition: background-color 0.3s; /* Transition for background color */
     width: 80%; /* Button will take 80% of the container's width */
-    max-width: 300px; /* Prevents it from becoming too wide on large screens */
+    max-width: 100px; /* Prevents it from becoming too wide on large screens */
     margin: 3px auto; /* Centers the button if it has a fixed width */
 }
 
@@ -1237,6 +1237,7 @@ color: #2c3e50; /* Dark gray for good contrast */
     background-color: #ccc; /* Grey background for disabled state */
     color: #666;            /* Darker text color */
 }
+
 
 
 
